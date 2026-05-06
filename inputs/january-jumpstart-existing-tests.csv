@@ -1,0 +1,384 @@
+"projectKey","testType","summary","description","gherkin","priority"
+"SQA","Cucumber","Two Sign-Up NCCs Logic","Display two sign-up NCCs only if member hasn't signed up from the first one.","Feature: Two Sign-Up NCCs Logic
+  Scenario: Two Sign-Up NCCs Logic
+    Given the user opens the app on Dec 29
+    Then they should receive the first January Jumpstart sign-up NCC
+    When the user signs up from the first NCC
+    Then they should not receive the second NCC on Dec 30","P1"
+"SQA","Cucumber","JJ Heads-Up Card (Dec 29) Suppression","Validates the visibility logic of the one-time heads-up card shown on December 28. Confirms correct suppression for ineligible users based on recovery count.","Feature: JJ Heads-Up Card (Dec 29) Suppression
+  Scenario: JJ Heads-Up Card (Dec 29) Suppression
+    Given it is December 29
+    When the user has 7 or more recoveries
+    Then show a JJ heads-up card on the Home screen
+    When the user has fewer than 7 recoveries
+    Then the JJ heads-up card should not appear","P2"
+"SQA","Cucumber","Weekly Plan Home Tile visibility","Ensures that the Weekly Plan tile is not hidden, even if the JJ card is shown, and the user has no active plan.","Feature: Weekly Plan Home Tile visibility
+  Scenario: Weekly Plan Home Tile visibility
+    Given a user has no active Weekly Plan
+    Then the Weekly Plan Home tile should remain visible throughout the challenge
+    Even if the January Jumpstart card is also shown","P3"
+"SQA","Cucumber","Validate January Jumpstart Homepage layout and components","Validates that the JJ Homepage shows all expected elements including preset tiles and layout items.","Feature: Validate January Jumpstart Homepage layout and components
+  Scenario: Validate January Jumpstart Homepage layout and components
+    Given the user navigates to the January Jumpstart Homepage
+    Then the page should display:
+      | Element |
+      |----------------------------------|
+      | 'X' icon |
+      | ""Choose Plan"" header |
+      | Background image with logo |
+      | January Jumpstart description |
+      | Learn More CTA |
+      | 3 suggested plans |
+      | WHOOP AI custom plan option |
+      | 5 Challenge presets |
+      | 3 Weekly Plan presets |
+      | 1 Custom Plan Tile |","P1"
+"SQA","Cucumber","JJ Homepage 'X' exit logic based on entry point","Ensures proper navigation behavior when the user closes the JJ Homepage using the X icon.","Feature: JJ Homepage 'X' exit logic based on entry point
+  Scenario: JJ Homepage 'X' exit logic based on entry point
+    Given the user taps the ""X"" icon on the January Jumpstart Homepage
+    When they came from the Home screen or NCC
+    Then they should return to the Home screen
+    When they came from the Weekly Plan page
+    Then they should return to the Weekly Plan page","P2"
+"SQA","Cucumber","Learn More CTA Link","Validates that the 'Learn More' CTA links correctly to a challenge article.","Feature: Learn More CTA Link
+  Scenario: Learn More CTA Link
+    Given the user is on the January Jumpstart Homepage
+    When they tap the 'Learn More' CTA
+    Then they should be redirected to a Locker Article that describes the challenge","P2"
+"SQA","Cucumber","Suggested Plan Attributes","Confirms each suggested plan includes required fields like behaviors, metrics, summary, etc.","Feature: Suggested Plan Attributes
+  Scenario: Suggested Plan Attributes
+    Given suggested plans are shown to a member
+    Then each plan should include:
+      | Attribute |
+      |-----------------|
+      | Metrics |
+      | Behaviors |
+      | Activities |
+      | Plan Name |
+      | Plan Summary |
+      | The Why |
+      | Track Mapping |","P1"
+"SQA","Cucumber","Suggested Plan Personalization by Status","Validates different AI logic depending on member type and health status.","Feature: Suggested Plan Personalization by Status
+  Scenario: Suggested Plan Personalization by Status
+    Given a member qualifies for suggested plans
+    When they have Healthspan data
+    Then 1-2 plans should focus on their weakest Healthspan contributors
+    When the member is marked as pregnant
+    Then their suggested plans should account for pregnancy status
+    When the member is marked as injured
+    Then their suggested plans should reflect injury considerations","P1"
+"SQA","Cucumber","Plan Generation Timing - TBD","Tests timing of plan generation for segmented cohorts.","Feature: Plan Generation Timing - TBD
+  Scenario: Plan Generation Timing - TBD
+    Given the date is January 29
+    When a member is part of the LCM-identified group
+    Then 3 suggested plans should be generated upon recovery processing
+    When a member is not in this group
+    Then plans will not be generated on first page open","P2"
+"SQA","Cucumber","Recovery Threshold for Plan Eligibility - FOLLOW UP","Tests suggested plan visibility threshold based on recovery count.","Feature: Recovery Threshold for Plan Eligibility - FOLLOW UP
+  Scenario: Recovery Threshold for Plan Eligibility - FOLLOW UP
+    Given a member has fewer than 7 recoveries
+    Then they should not see suggested plans
+    When they reach their 7th recovery
+    Then suggested plans should be generated
+    And the member should receive an LCM notification","P1"
+"SQA","Cucumber","Loading State and Latency Fallback","Displays a loading state while pre-generated plans load. Latency fallback logic retained in case generation behavior changes.","Feature: Loading State and Latency Fallback
+  Scenario: Loading State and Latency Fallback
+    Given a member opens the January Jumpstart Homepage
+    When pre generated plans are being display
+    Then show a loading state at the top of the page
+    And if it takes more than 10 seconds
+    Then fallback to only show the option to build a custom plan with WHOOP AI","P1"
+"SQA","Cucumber","Existing Plan Displayed as Last Tile (DESCOPED)","Previously scoped to replace presets with current plan tile. Now descoped, but preserved for documentation.","Feature: Existing Plan Displayed as Last Tile (DESCOPED)
+  Scenario: Existing Plan Displayed as Last Tile (DESCOPED)
+    Given a member is already in a Weekly Plan
+    Then their existing plan should appear as the only tile among prebuilt plans
+    And the regular preset plans should not be displayed
+    When the member taps the tile
+    Then they should be directed to the Plan Details page
+    And be able to commit or edit the plan","P2"
+"SQA","Cucumber","Healthspan Track Exclusion Logic (DESCOPED)","Healthspan-related plan filtering logic originally scoped but later descoped. Test case retained for completeness.","Feature: Healthspan Track Exclusion Logic (DESCOPED)
+  Scenario: Healthspan Track Exclusion Logic (DESCOPED)
+    Given a member is pregnant or lacks Healthspan access
+    Then they should not see the 'Gain Healthy Years' track among prebuilt plans
+    And this exclusion should apply to: One members, those with <21 recoveries, pregnant members, and those who disabled Healthspan","P1"
+"SQA","Cucumber","7 Recoveries Required to Unlock Suggested Plans","Verifies progressive unlock of AI plans after 7 recoveries.","Feature: 7 Recoveries Required to Unlock Suggested Plans
+  Scenario: 7 Recoveries Required to Unlock Suggested Plans
+    Given a member has fewer than 7 recoveries
+    Then only the WHOOP AI custom plan option should be visible
+    When the member reaches their 7th recovery
+    Then suggested plans should be generated
+    And the member should receive an LCM notification","P1"
+"SQA","Cucumber","Custom Plan Launches Coach Everywhere","Tests full routing from custom plan CTA into Coach with agent engagement.","Feature: Custom Plan Launches Coach Everywhere
+  Scenario: Custom Plan Launches Coach Everywhere
+    Given a member chooses to build a custom plan with WHOOP AI
+    Then they should be taken to a WHOOP Chat with a specific agent
+    And the full-page Coach Everywhere view should open","P2"
+"SQA","Cucumber","AI Plan Generation with Tracks + Personalization","Confirms that AI plans consider existing plan, KPIs, and user state.","Feature: AI Plan Generation with Tracks + Personalization
+  Scenario: AI Plan Generation with Tracks + Personalization
+    Given a member discusses goals with the WHOOP AI agent
+    Then the agent should create a Jan Jumpstart plan
+    And the plan should be based on the 6 high-level tracks and personalized KPIs
+    And the agent should also consider the member's current plan","P1"
+"SQA","Cucumber","Plan Metadata (Tracking Fields)","Ensures all saved plans include proper tracking fields for analytics.","Feature: Plan Metadata (Tracking Fields)
+  Scenario: Plan Metadata (Tracking Fields)
+    Given a plan is saved for a member
+    Then it should be recorded with the following metadata:
+      | Field | Value Description |
+      |--------------|----------------------------------------|
+      | preset_name | Name of the plan (prebuilt or jj_2026_coach_plan) |
+      | custom | true if edited, false if not |
+      | source | AI Conversation Service |","P1"
+"SQA","Cucumber","Regenerate Suggested Plans on State Change (UNLIKELY)","Captures dynamic plan regen behavior based on health updates.","Feature: Regenerate Suggested Plans on State Change (UNLIKELY
+  Scenario: Regenerate Suggested Plans on State Change
+    Given a member opens the January Jumpstart overview
+    When a change in state such as pregnancy or injury is detected
+    Then the suggested plans should be regenerated
+    Otherwise, previously generated plans should remain unchanged","P3"
+"SQA","Cucumber","Future Plan Storage Before Jan 4","Updated logic after scope change—commitments activate immediately.","Feature: Future Plan Storage Before Jan 4
+  Scenario: Future Plan Storage Before Jan 4
+    Given a member commits to a Jan Jumpstart plan before January 4
+    Then they should be immediately enrolled in the plan
+    And the plan will roll over into the active challenge state on January 4","P2"
+"SQA","Cucumber","AI Plan Details Page Design","Confirms all fields and visuals are present in AI Plan Details view.","Feature: AI Plan Details Page Design
+  Scenario: AI Plan Details Page Design
+    Given a member selects 'SEE DETAILS' for a suggested plan or 'REVIEW & CONFIRM' for a custom plan
+    Then they should be navigated to the AI Plan Details page
+    And the page should include:
+      | Element |
+      |---------------------|
+      | Title |
+      | Plan Summary |
+      | Why This Plan |
+      | Primary Metrics |
+      | Behaviors |
+      | Activities |
+      | CTA: Commit to Plan |
+    And the background should be styled to match AI designs","P2"
+"SQA","Cucumber","Prebuilt Plan Details Page","Ensures prebuilt plan detail screen contains all required sections.","Feature: Prebuilt Plan Details Page
+  Scenario: Prebuilt Plan Details Page
+    Given a member clicks on a prebuilt plan
+    Then they should be taken to the Plan Details page
+    And the page should include:
+      | Element |
+      |---------------------------------|
+      | Title: Prebuilt Plan Name |
+      | Plan Summary (from LCM) |
+      | Note on Healthspan logic |
+      | Primary Metrics |
+      | Behaviors |
+      | Activities |
+      | CTA: COMMIT TO THIS PLAN |","P2"
+"SQA","Cucumber","Override Warning Above CTA","Confirms plan override warning appears in Plan Overview before activation.","Feature: Override Warning Above CTA
+  Scenario: Override Warning Above CTA
+    Given a member is on a Plan Overview page
+    Then a reminder should be shown above the Start Challenge button
+    And the message should state: ""Behaviors will be automatically added to your Journal and will override your current active plan.""","P2"
+"SQA","Cucumber","Healthspan Plan Based on Worst Contributor (DESCOPED)","This logic was descoped but is retained here for reference.","Feature: Healthspan Plan Based on Worst Contributor (DESCOPED)
+  Scenario: Healthspan Plan Based on Worst Contributor (DESCOPED)
+    Given a member selects the Healthspan (Gain Healthy Years) track
+    Then their plan should be built using their lowest Healthspan contributor
+    And the metrics, behaviors, and activities should reflect that contributor","P1"
+"SQA","Cucumber","Plan Name Tracking (Custom & AI)","Tests name tracking for customized and AI-generated plans.","Feature: Plan Name Tracking (Custom & AI)
+  Scenario: Plan Name Tracking (Custom & AI)
+    Given a member customizes a prebuilt plan
+    Then the plan name should remain unchanged in the app
+    And be tracked as [plan name] - custom in the backend
+    When the plan is AI-generated
+    Then the name provided by the agent should be shown in the app","P2"
+"SQA","Cucumber","JJ Commitment Replaces Weekly Plan","Verifies JJ plan replaces any existing Weekly Plan when committed.","Feature: JJ Commitment Replaces Weekly Plan
+  Scenario: JJ Commitment Replaces Weekly Plan
+    Given a member commits to a January Jumpstart plan between Dec 29 and Feb 2
+    Then that plan should become their active Weekly Plan","P1"
+"SQA","Cucumber","Commitment Deadline: January 31","Tests time-gated logic for plan commitments.","Feature: Commitment Deadline: January 31
+  Scenario: Commitment Deadline: January 31
+    Given it is January 31
+    When a member attempts to commit to a January Jumpstart plan
+    Then the system should allow it
+    When it is February 1 or later
+    Then the member should not be able to commit to a JJ plan","P1"
+"SQA","Cucumber","Back Arrow from Plan Details","Verifies back nav behavior from Plan Details into JJ Homepage.","Feature: Back Arrow from Plan Details
+  Scenario: Back Arrow from Plan Details
+    Given a member is viewing a Plan Details page
+    When they tap the back arrow
+    Then they should be navigated back to the January Jumpstart homepage","P2"
+"SQA","Cucumber","JJ Plan Overview After Commitment","Tests Plan Overview CTA routing behavior post-commitment.","Feature: JJ Plan Overview After Commitment
+  Scenario: JJ Plan Overview After Commitment
+    Given a member commits to a January Jumpstart plan
+    Then they should be taken to the Plan Overview page
+    And the page should include a JJ callout
+    When they tap Edit Current Plan
+    Then they should be taken to the JJ Homepage
+    When they tap to Edit Metrics/Behaviors/Activities
+    Then a pop-up should appear to edit that item","P2"
+"SQA","Cucumber",""Starts Jan 5th" or Countdown","Tests date-dependent text updates in Plan Overview.","Feature: "Starts Jan 5th" or Countdown
+  Scenario: "Starts Jan 5th" or Countdown
+    Given a member has joined JJ before January 5
+    Then the Plan Overview page should display ""Starts Jan 5th""
+    When January 5 has passed
+    Then the page should display ending date in the challenge ("Ends X Date")","P2"
+"SQA","Cucumber","JJ Takeover in Weekly Plan Creation","Validates JJ card appears in WP creation flow with priority.","Feature: JJ Takeover in Weekly Plan Creation
+  Scenario: JJ Takeover in Weekly Plan Creation
+    Given a member opens Weekly Plan creation between Jan 4 and Feb 1
+    Then January Jumpstart should appear at the top of the page
+    And Weekly Plans and Custom tile should be displayed below","P1"
+"SQA","Cucumber","Persistent JJ card on Home for non-signups with adaptive copy and conditional visibility","Validates persistent JJ card visibility for non-participants, ensuring dynamic copy changes week-to-week and proper dismissal logic upon enrollment.","Feature: Persistent JJ card on Home for non-signups with adaptive copy and conditional visibility
+  Scenario: Persistent JJ card on Home for non-signups with adaptive copy and conditional visibility
+    Given a member has not signed up for January Jumpstart
+    Then a persistent card should appear on the Home screen until January 31
+    And the card should link to the January Jumpstart Homepage
+    When the member signs up for the challenge
+    Then the card should disappear
+    And the card should show different copy based on the time period:
+      | Time Period | Copy Variant |
+      |----------------|--------------|
+      | Pre-challenge | Variant 1 |
+      | Week 1 | Variant 2 |
+      | Week 2–4 | Variant 3 |
+    Bonus: If the member has no active Weekly Plan Then only the JJ card should show
+    If the member has a Weekly Plan Then show both JJ and Build Your Best Self cards","P1"
+"SQA","Cucumber","JJ Weekly Plan Tile on Home","Verifies UI behavior of the Weekly Plan tile when tied to JJ progress.","Feature: JJ Weekly Plan Tile on Home
+  Scenario: JJ Weekly Plan Tile on Home
+    Given a member commits to a January Jumpstart plan during the challenge period
+    Then the Weekly Plan tile on the Home screen should display:
+      | Element |
+      |-----------------------------|
+      | Section Header: January Jumpstart |
+      | Starts Jan 5th OR Ends X Date |
+      | Plan Title |
+      | Week Y (Z Days Left) |
+      | % Weekly Goal Complete |","P1"
+"SQA","Cucumber",""Starts Jan 5th" Display on Pre-Challenge Views","Tests pre-challenge indicator text in both Plan Overview and Home.","Feature: "Starts Jan 5th" Display on Pre-Challenge Views
+  Scenario: "Starts Jan 5th" Display on Pre-Challenge Views
+    Given a member joins January Jumpstart before January 5
+    Then they should see 'Starts Jan 5th' displayed on:
+      | Screen |
+      |-------------------|
+      | Plan Overview |
+      | Home screen |","P2"
+"SQA","Cucumber","Challenge Kickoff NCC (No Summary Pop)","Confirms NCC swap logic and suppression of Weekly Plan summary pop at kickoff.","Feature: Challenge Kickoff NCC (No Summary Pop)
+  Scenario: Challenge Kickoff NCC (No Summary Pop)
+    Given the Jan Jumpstart challenge begins
+    Then a kickoff NCC should be sent to members
+    And this NCC should link to Weekly Plan Overview
+    And it should replace the default Weekly Plan NCC
+    And no Weekly Plan summary should pop on week 1 of January Jumpstart","P1"
+"SQA","Cucumber","Weekly Recap NCC Replaces WP NCC (Jan 12/19/26/Feb 2)","Covers recurring Monday recap NCC with Weekly Plan NCC suppression.","Feature: Weekly Recap NCC Replaces WP NCC (Jan 12/19/26/Feb 2)
+  Scenario: Weekly Recap NCC Replaces WP NCC
+    Given it is the end of a challenge week
+    Then a new NCC should be sent to the member
+    And it should prompt them to review their Weekly Recap
+    And it should replace the standard Weekly Plan NCC","P1"
+"SQA","Cucumber","Weekly Recap Page UI & Logic","Verifies full structure and conditional content of Weekly Recap screen.","Feature: Weekly Recap Page UI & Logic
+  Scenario: Weekly Recap Page UI & Logic
+    Given a member taps the weekly recap NCC
+    Then they should land on the Weekly Recap screen
+    And the screen should include:
+      | Element |
+      |--------------------------|
+      | Plan name at the top |
+      | Jan Jumpstart progress summary |
+      | Weekly Plan progress |
+      | CONTINUE THIS PLAN (sticky CTA) |
+      | CHANGE PLAN (below stats) |
+      | Coach Everywhere integration |
+    And the text content should vary based on Weekly Plan progress","P2"
+"SQA","Cucumber","Coach Everywhere Autopop on Recap","Ensures CE behavior is auto-triggered after load delay.","Feature: Coach Everywhere Autopop on Recap
+  Scenario: Coach Everywhere Autopop on Recap
+    Given the Weekly Recap page is loaded
+    Then after 3 seconds or once loading completes
+    A Coach Everywhere insight should autopop on the page","P2"
+"SQA","Cucumber",""Change Plan" Routes to Plan Overview","Confirms Change Plan CTA logic from Recap to Overview.","Feature: "Change Plan" Routes to Plan Overview
+  Scenario: "Change Plan" Routes to Plan Overview
+    Given a member taps the CHANGE PLAN button on the Weekly Recap page
+    Then they should be navigated to the Plan Overview page","P2"
+"SQA","Cucumber","Continue Plan Navigates to Home","Verifies navigation logic for CONTINUE PLAN CTA from Recap.","Feature: Continue Plan Navigates to Home
+  Scenario: Continue Plan Navigates to Home
+    Given a member taps the CONTINUE PLAN button on the Weekly Recap page
+    Then they should be returned to the Home screen","P2"
+"SQA","Cucumber","Coach Plan Update → AI Plan Details","Tests routing from Coach plan recommendation into plan details flow.","Feature: Coach Plan Update → AI Plan Details
+  Scenario: Coach Plan Update → AI Plan Details
+    Given a member receives a plan update recommendation in Coach
+    When they tap REVIEW & CONFIRM PLAN
+    Then they should be taken to the AI Plan Details page","P1"
+"SQA","Cucumber","Recap Plan Details Navigation","Tests both back and commit flows from Recap-driven Plan Details screen.","Feature: Recap Plan Details Navigation
+  Scenario: Recap Plan Details Navigation
+    Given a member is viewing the Plan Details page from Weekly Recap
+    When they tap the back button
+    Then they should return to the Weekly Recap page
+    When they tap COMMIT TO PLAN
+    Then they should be taken to the Plan Overview page","P2"
+"SQA","Cucumber","Invitation NCC → JJ Homepage","Validates that the first NCC opens the JJ overview page properly.","Feature: Invitation NCC → JJ Homepage
+  Scenario: Invitation NCC → JJ Homepage
+    Given it is Monday, December 29
+    When the Invitation NCC is delivered
+    Then it should link the member directly to the January Jumpstart homepage","P1"
+"SQA","Cucumber","Dec 29 Push to Disengaged Users","Ensures re-engagement push is triggered for the correct cohort with correct link.","Feature: Dec 29 Push to Disengaged Users
+  Scenario: Dec 29 Push to Disengaged Users
+    Given it is Monday, December 29
+    When a member is identified as disengaged
+    Then they should receive a push notification from LCM
+    And the push should deep link to the January Jumpstart overview","P1"
+"SQA","Cucumber","Jan 5 NCC: Conditional Routing","Tests dual-path NCC logic on challenge start day based on signup status.","Feature: Jan 5 NCC: Conditional Routing
+  Scenario: Jan 5 NCC: Conditional Routing
+    Given it is January 5
+    When a member has not signed up for Jan Jumpstart
+    Then the same invite to sign up as Dec 29 NCC should prompt them to join
+    And link them to the set up plan
+    When a member has signed up for Jan Jumpstart
+    Then the NCC to celebrate JJ Kick-off should link them to plan overview
+    And weekly recap shouldn't pop for this week
+    And the NCC should remain visible for 2 days","P1"
+"SQA","Cucumber","Jan 5 Push to Non-Participants","Confirms push trigger and routing for users not enrolled on challenge start.","Feature: Jan 5 Push to Non-Participants
+  Scenario: Jan 5 Push to Non-Participants
+    Given it is January 5
+    When a member has not joined Jan Jumpstart
+    Then they should receive a push notification
+    And it should deep link to the January Jumpstart overview","P1"
+"SQA","Cucumber","Friday Pop for Committed Members","Ensures Friday plan summary pop is replaced with a JJ-specific Pop into plan insights.","Feature: Friday Pop for Committed Members
+  Scenario: Friday Pop for Committed Members
+    Given it is a Friday during the challenge
+    When a member is committed to Jan Jumpstart
+    Then they should receive a motivational Pop via Iterable
+    And the Pop should link to plan overview
+    And it should replace the Weekly Plan Friday NCC","P1"
+"SQA","Cucumber","Jan 19 Push to Disengaged → Weekly Recap","Confirms deep-link push to recap is sent mid-challenge for re-engagement.","Feature: Jan 19 Push to Disengaged → Weekly Recap
+  Scenario: Jan 19 Push to Disengaged → Weekly Recap
+    Given it is January 19
+    When a member is identified as disengaged
+    Then they should receive a push notification from LCM
+    And the push should deep link to the Weekly Recap page","P1"
+"SQA","Cucumber","End-of-Challenge Email Summary from Agent (BONUS)","Ensures agent generates summary for post-challenge email wrap-up.","Feature: End-of-Challenge Email Summary from Agent (BONUS)
+  Scenario: End-of-Challenge Email Summary from Agent (BONUS)
+    Given a member completes the January Jumpstart challenge
+    Then the agent should generate a summary of their progress
+    And a shorter 2–3 sentence version should be created for the end-of-challenge email sent by LCM","P3"
+"SQA","Cucumber","Week 1 Wednesday (Jan 7) NCC for Motivation","Covers motivational nudge during Week 1 to encourage consistency.","Feature: Week 1 Wednesday (Jan 7) NCC for Motivation
+  Scenario: Week 1 Wednesday (Jan 7) NCC for Motivation
+    Given it is the first Wednesday of Week 1
+    When a member is committed to Jan Jumpstart
+    Then they should receive an NCC encouraging them to continue
+    And the NCC should link to their Plan Overview page","P2"
+"SQA","Cucumber","Post-Challenge Plan Transition","Ensures plan continuity post-challenge unless user makes an update.","Feature: Post-Challenge Plan Transition
+  Scenario: Post-Challenge Plan Transition
+    Given the January Jumpstart challenge has ended
+    Then a member's JJ active plan should remain active until they change into a standard Weekly Plan, after that they won't see it anymore.","P1"
+"SQA","Cucumber","JJ Tile Shown in UI Even If Enrolled in Regular Weekly Plan","Ensures JJ visibility even for users in regular Weekly Plans.","Feature: JJ Tile Shown in UI Even If Enrolled in Regular Weekly Plan
+  Scenario: JJ Tile Shown in UI Even If Enrolled in Regular Weekly Plan
+    Given a member is enrolled in a regular Weekly Plan
+    And the January Jumpstart challenge is active
+    Then the January Jumpstart tile should be displayed:
+      | Location |
+      |------------------|
+      | Plan Overview |
+      | Home screen (My Week section) |","P2"
+"SQA","Cucumber","Pregeneration Strategy for AI Suggested Plans","Validates pregeneration for high-intent cohorts using cost-optimized processing.","Feature: Pregeneration Strategy for AI Suggested Plans
+  Scenario: Pregeneration Strategy for AI Suggested Plans
+    Given a member meets at least one of the following criteria:
+      | Criteria |
+      |-----------------------------------------|
+      | High engagement with Weekly Plan |
+      | High engagement with Healthspan |
+      | Participated in Jan Jumpstart 2025 |
+      | Joined WHOOP in the last 1–3 months |
+    Then their AI suggested plans should be pre-generated 3–5 days before Jan Jumpstart
+    And Standard processing should be used to optimize for cost","P2"

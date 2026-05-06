@@ -1,0 +1,10 @@
+# Minimal persona: feature flags only.
+# Use for scenarios that only need specific flags (e.g. "persona-feature-flag-test").
+# Source: Confluence "PersonaAdapter examples" → Feature Flag Service.
+service_data:
+  - service: feature-flags
+    data_class: PersonaFeatureFlagRequest
+    data:
+      feature_flags:
+        - persona-feature-flag-test
+      # feature_groups: only add group names that exist in your environment (e.g. "sample_group" often does not)

@@ -1,0 +1,12 @@
+# Persona with Healthspan Whoop Age data.
+# Uses relative date: start_date_days_ago (required by healthspan deserializeData).
+# Source: Confluence "PersonaAdapter examples" → Healthspan Service.
+service_data:
+  - service: healthspan-service
+    data_class: UpsertWhoopAgeRequest
+    data:
+      whoop_age_value: 34.3
+      scaled_pace_of_aging: 0.5
+      raw_pace_of_aging: 1.0
+      calibrating: false
+      start_date_days_ago: 21

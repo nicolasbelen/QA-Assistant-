@@ -1,0 +1,64 @@
+# Minimal complete persona template (Persona Schema).
+# Only required top-level fields + one cycle. Omit sections you are not using.
+# See docs/PERSONA_SCHEMA_REFERENCE.md for full schema.
+
+persona_key: my-persona-key
+
+strap_type: HARVARD
+height: 170
+
+journal_onboarding_completed: true
+all_feature_onboarding_completed: false
+
+cycles:
+  - cycle_type: persona
+    day_strain: 12
+    sleep:
+      sleep_score: 70
+      cycles_count: 3
+      disturbances: 2
+      in_sleep_efficiency: 0.9
+      respiratory_rate: 15
+      normal: true
+      significant: true
+      projected_sleep_hours: 8
+      projected_score: 70
+      time_in_bed_hours: 8
+      quality_duration_hours: 8
+      arousal_time_hours: 0.133
+      credit_from_naps_hours: 0.333
+      debt_post_hours: 0.25
+      debt_pre_hours: 0.5
+      habitual_sleep_need_hours: 7
+      latency_hours: 0.25
+      light_sleep_duration_hours: 2.4
+      need_from_strain_hours: 0.25
+      rem_sleep_duration_hours: 2
+      sleep_need_hours: 8
+      slow_wave_sleep_duration_hours: 2.4
+      wake_duration_hours: 0
+      no_data_duration_hours: 0
+      total_wake_events: 2
+    recovery:
+      recovery_score: 60
+      resting_heart_rate: 60
+      hrv: 50
+      spo2: 98
+      hr_baseline: 60
+      rhr_component: 0.5
+      hrv_component: 0.5
+      normal: true
+      history_size: 14
+      recovery_rate: 1
+      skin_temperature: 36.5
+      hrv_rmssd: 50
+    activities_for_day: []
+    behavior_inputs: []
+
+week_plans: []
+
+service_data: []
+# Add your service_data entries here (feature-flags, health-service, advanced-labs-service, etc.).
+# See Confluence PersonaAdapter examples or existing bloodwork-mci persona files.
+
+# Optional: account_data (ordered_skus lives under account_data if needed), gender, age, impacts, etc.

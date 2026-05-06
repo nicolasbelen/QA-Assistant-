@@ -1,0 +1,75 @@
+{
+    "config.encoding": "UTF-8",
+    "config.delimiter": ",",
+    "config.project.from.csv": true,
+    "config.project.key": "MED",
+    "config.list.delimiter": ";",
+    "config.date.format": "DD/MM/YYYY HH:mm",
+    "config.create.test.repository.folders": true,
+    "config.field.mappings": [
+        {
+            "column.index": 0,
+            "jira.field": {
+                "group": "Xray",
+                "id": "xray_testtype",
+                "type": "string"
+            }
+        },
+        {
+            "column.index": 1,
+            "jira.field": {
+                "group": "Native",
+                "id": "summary",
+                "type": "string"
+            }
+        },
+        {
+            "column.index": 2,
+            "jira.field": {
+                "group": "Native",
+                "id": "description",
+                "type": "string"
+            }
+        },
+        {
+            "column.index": 3,
+            "jira.field": {
+                "group": "Xray",
+                "id": "xray_gherkin_def",
+                "type": "string"
+            }
+        },
+        {
+            "column.index": 4,
+            "jira.field": {
+                "group": "Native",
+                "id": "__project_key",
+                "type": "string"
+            }
+        },
+        {
+            "column.index": 5,
+            "jira.field": {
+                "group": "Native",
+                "id": "priority",
+                "type": "string"
+            }
+        },
+        {
+            "column.index": 6,
+            "jira.field": {
+                "group": "Native",
+                "id": "labels",
+                "type": "string"
+            }
+        },
+        {
+            "column.index": 7,
+            "jira.field": {
+                "group": "Xray",
+                "id": "xray_test_repo_folder",
+                "type": "string"
+            }
+        }
+    ]
+}

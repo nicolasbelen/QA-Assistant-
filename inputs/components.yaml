@@ -1,0 +1,1245 @@
+# Xray Component → Feature Area Mapping
+# Used by the regression planner skill to map PR changes to test case components.
+#
+# Fields:
+#   component:  Exact name as it appears in Xray/Jira
+#   feature:    Feature area this covers in the app
+#   team:       Team prefix used in Jira ticket keys (e.g. STREN, FROGE) or team name
+#   keywords:   Words/phrases in PR titles that suggest this component is affected
+#
+# Leave `team` or `feature` blank ("") where data is unavailable — reviewed separately.
+# ------------------------------------------------------------------
+
+components:
+
+  # ─── STRENGTH TRAINER ───────────────────────────────────────────
+  - component: "Strength Trainer"
+    feature: "Strength Trainer"
+    team: "STREN"
+    keywords: ["STREN", "strength trainer", "strength", "workout", "exercise", "training"]
+
+  - component: "Strength Trainer - Workout Start"
+    feature: "Strength Trainer"
+    team: "STREN"
+    keywords: ["STREN", "workout start", "start workout", "begin workout"]
+
+  - component: "Strength Trainer - Workout Share"
+    feature: "Strength Trainer"
+    team: "STREN"
+    keywords: ["STREN", "workout share", "share workout"]
+
+  - component: "Strength Trainer - Workout Naming"
+    feature: "Strength Trainer"
+    team: "STREN"
+    keywords: ["STREN", "workout naming", "workout name", "rename workout"]
+
+  - component: "Strength Trainer - Workout From Library"
+    feature: "Strength Trainer"
+    team: "STREN"
+    keywords: ["STREN", "workout library", "library workout"]
+
+  - component: "Strength Trainer - Workout Details"
+    feature: "Strength Trainer"
+    team: "STREN"
+    keywords: ["STREN", "workout details", "workout detail"]
+
+  - component: "Strength Trainer - Workout Copy"
+    feature: "Strength Trainer"
+    team: "STREN"
+    keywords: ["STREN", "workout copy", "copy workout", "duplicate workout"]
+
+  - component: "Strength Trainer - Time Based Exercises"
+    feature: "Strength Trainer"
+    team: "STREN"
+    keywords: ["STREN", "time based exercise", "time-based exercise"]
+
+  - component: "Strength Trainer - My Workouts"
+    feature: "Strength Trainer"
+    team: "STREN"
+    keywords: ["STREN", "my workouts", "saved workouts"]
+
+  - component: "Strength Trainer - Exercise Filtering"
+    feature: "Strength Trainer"
+    team: "STREN"
+    keywords: ["STREN", "exercise filter", "exercise filtering", "filter exercise"]
+
+  - component: "Strain Target"
+    feature: "Strength Trainer"
+    team: "STREN"
+    keywords: ["STREN", "strain target", "target strain", "optimal strain"]
+
+  - component: "Time Based"
+    feature: "Strength Trainer"
+    team: "STREN"
+    keywords: ["STREN", "time based", "time-based"]
+
+  - component: "Time + Weight Based"
+    feature: "Strength Trainer"
+    team: "STREN"
+    keywords: ["STREN", "time + weight", "time and weight", "time-based weight"]
+
+  - component: "Rep Based"
+    feature: "Exercise Progression"
+    team: "AC"
+    keywords: ["rep based", "rep-based", "reps", "exercise progression"]
+
+  - component: "Rep + Weight Based"
+    feature: "Exercise Progression"
+    team: "AC"
+    keywords: ["rep + weight", "rep and weight", "weight based", "exercise progression"]
+
+  - component: "Custom exercises"
+    feature: "Strength Trainer"
+    team: "STREN"
+    keywords: ["STREN", "custom exercise", "custom workout", "create exercise"]
+
+  - component: "Exercise Progression"
+    feature: "Exercise Progression"
+    team: "AC"
+    keywords: ["exercise progression", "progression", "PR", "personal record"]
+
+  - component: "Exercise Details"
+    feature: "Activities"
+    team: "AC"
+    keywords: ["exercise details", "exercise detail", "exercise info"]
+
+  # ─── WEEKLY PLAN ────────────────────────────────────────────────
+  - component: "Weekly Plan"
+    feature: "Weekly Plan"
+    team: "FROGE"
+    keywords: ["FROGE", "weekly plan", "plan", "weekly goal"]
+
+  - component: "Weekly Plan - Summary Screen"
+    feature: "Weekly Plan"
+    team: "FROGE"
+    keywords: ["FROGE", "weekly plan summary", "plan summary"]
+
+  - component: "Weekly Plan - Metrics"
+    feature: "Weekly Plan"
+    team: "FROGE"
+    keywords: ["FROGE", "weekly plan metric", "plan metric"]
+
+  - component: "Weekly Plan - Lock - Unlock - Notifications"
+    feature: "Weekly Plan"
+    team: "FROGE"
+    keywords: ["FROGE", "weekly plan lock", "plan unlock", "plan notification"]
+
+  - component: "Weekly Plan - Home Tile"
+    feature: "Weekly Plan"
+    team: "FROGE"
+    keywords: ["FROGE", "weekly plan tile", "plan tile"]
+
+  - component: "Weekly Plan - Editing"
+    feature: "Weekly Plan"
+    team: "FROGE"
+    keywords: ["FROGE", "edit weekly plan", "edit plan"]
+
+  - component: "Weekly Plan - Creation"
+    feature: "Weekly Plan"
+    team: "FROGE"
+    keywords: ["FROGE", "create weekly plan", "plan creation", "new plan"]
+
+  - component: "Weekly Plan - Behaviors"
+    feature: "Weekly Plan"
+    team: "FROGE"
+    keywords: ["FROGE", "weekly plan behavior", "plan behavior"]
+
+  # ─── TRENDS ─────────────────────────────────────────────────────
+  - component: "Trends"
+    feature: "Trends"
+    team: "FROGE"
+    keywords: ["FROGE", "trend", "trends", "graph", "chart", "data visualization"]
+
+  - component: "Weight & Body Comp"
+    feature: "Trends"
+    team: "HDD"
+    keywords: ["weight", "body comp", "body composition", "weight trend"]
+
+  - component: "Weight & Body Comp - Manual Entries"
+    feature: "Trends"
+    team: "HDD"
+    keywords: ["weight manual entry", "manual weight", "weight entry"]
+
+  - component: "Weight & Body Comp - Lean Body Mass"
+    feature: "Trends"
+    team: "HDD"
+    keywords: ["lean body mass", "lean mass", "LBM"]
+
+  - component: "Weight & Body Comp - All Recordings"
+    feature: "Trends"
+    team: "HDD"
+    keywords: ["weight recordings", "body comp recordings", "all recordings"]
+
+  - component: "Weight Based"
+    feature: "Trends"
+    team: "HDD"
+    keywords: ["weight based", "weight trend"]
+
+  - component: "VO2Max"
+    feature: "VO2 Max"
+    team: "MOVE"
+    keywords: ["MOVE", "VO2", "VO2Max", "aerobic capacity", "max aerobic"]
+
+  # ─── STRAIN ─────────────────────────────────────────────────────
+  - component: "Strain"
+    feature: "Strain"
+    team: "HDD"
+    keywords: ["strain", "training load", "exertion", "cardiovascular load"]
+
+  # ─── SLEEP ──────────────────────────────────────────────────────
+  - component: "Sleep"
+    feature: "Sleep"
+    team: "WU"
+    keywords: ["WU", "sleep", "nap", "REM", "staging", "sleep score", "sleep detection"]
+
+  - component: "Sleep Planner"
+    feature: "Sleep Planner"
+    team: "FROGE"
+    keywords: ["FROGE", "sleep planner", "sleep plan", "sleep schedule", "sleep goal"]
+
+  - component: "Haptic Alarm"
+    feature: "Sleep"
+    team: "HDD"
+    keywords: ["haptic alarm", "alarm", "haptic", "wake up alarm"]
+
+  # ─── RECOVERY ───────────────────────────────────────────────────
+  - component: "Recovery"
+    feature: "Recovery"
+    team: "HDD"
+    keywords: ["recovery", "recovery score", "readiness", "HRV", "RHR"]
+
+  - component: "RHR"
+    feature: "RHR"
+    team: "DSB"
+    keywords: ["RHR", "resting heart rate"]
+
+  - component: "HRV"
+    feature: "Recovery"
+    team: "DSB"
+    keywords: ["HRV", "heart rate variability"]
+
+  - component: "Respiratory Rate"
+    feature: "Respiratory Rate"
+    team: "DSB"
+    keywords: ["respiratory rate", "breathing rate", "respiration"]
+
+  # ─── JOURNAL ────────────────────────────────────────────────────
+  - component: "Journal"
+    feature: "Journal"
+    team: "FROGE"
+    keywords: ["FROGE", "journal", "log", "daily log", "behavior log"]
+
+  - component: "Journal - Home Tile"
+    feature: "Journal"
+    team: "FROGE"
+    keywords: ["FROGE", "journal tile", "journal home tile"]
+
+  - component: "Journal - Date Picker"
+    feature: "Journal"
+    team: "FROGE"
+    keywords: ["FROGE", "journal date", "date picker"]
+
+  - component: "Journal - Customize"
+    feature: "Journal"
+    team: "FROGE"
+    keywords: ["FROGE", "journal customize", "customize journal"]
+
+  - component: "Journal - Auto pop"
+    feature: "Journal"
+    team: "FROGE"
+    keywords: ["FROGE", "journal auto", "auto populate", "auto pop", "autofill journal"]
+
+  - component: "Journal - Weekly Plan in Journal"
+    feature: "Journal"
+    team: "FROGE"
+    keywords: ["FROGE", "journal weekly plan", "weekly plan journal"]
+
+  - component: "Journal - Settings"
+    feature: "Journal"
+    team: "FROGE"
+    keywords: ["FROGE", "journal settings"]
+
+  - component: "Journal - Search & Edit"
+    feature: "Journal"
+    team: "FROGE"
+    keywords: ["FROGE", "journal search", "journal edit", "search journal"]
+
+  - component: "Journal - Previous Answers"
+    feature: "Journal"
+    team: "FROGE"
+    keywords: ["FROGE", "journal previous answers", "previous answers"]
+
+  - component: "Journal - Onboarding"
+    feature: "Journal"
+    team: "FROGE"
+    keywords: ["FROGE", "journal onboarding"]
+
+  - component: "Journal - Magnitude"
+    feature: "Journal"
+    team: "FROGE"
+    keywords: ["FROGE", "journal magnitude", "magnitude"]
+
+  - component: "Journal - Integrations"
+    feature: "Journal"
+    team: "FROGE"
+    keywords: ["FROGE", "journal integration"]
+
+  - component: "AI Journal"
+    feature: "Journal"
+    team: "FROGE"
+    keywords: ["FROGE", "AI journal", "journal AI", "generative journal"]
+
+  # ─── BEHAVIOR IMPACTS ───────────────────────────────────────────
+  - component: "Behavior impacts"
+    feature: "Behavior and Impacts"
+    team: "HDD"
+    keywords: ["behavior impact", "behavior", "lifestyle", "impact on recovery"]
+
+  - component: "Impact on Recovery"
+    feature: "Behavior and Impacts"
+    team: "HDD"
+    keywords: ["impact on recovery", "behavior impact", "lifestyle impact"]
+
+  # ─── COMMUNITY / PEOPLE ─────────────────────────────────────────
+  - component: "Community"
+    feature: "Community"
+    team: "PEOP"
+    keywords: ["PEOP", "community", "social", "follower", "following", "feed", "friend", "people"]
+
+  # ─── ACTIVITIES ─────────────────────────────────────────────────
+  - component: "Activities"
+    feature: "Activities"
+    team: "AC"
+    keywords: ["AC", "activity", "activities", "workout detection", "activity detection"]
+
+  - component: "Start Activity"
+    feature: "Start Activity"
+    team: "AC"
+    keywords: ["AC", "start activity", "begin activity", "activity start"]
+
+  - component: "Activities - Start Activity"
+    feature: "Activities"
+    team: "AC"
+    keywords: ["AC", "start activity", "activity start"]
+
+  - component: "Activities - Start Activity - Optimal Strain"
+    feature: "Activities"
+    team: "AC"
+    keywords: ["AC", "optimal strain", "activity optimal strain"]
+
+  - component: "Activities - Add Activity"
+    feature: "Activities"
+    team: "AC"
+    keywords: ["AC", "add activity", "manual activity", "log activity"]
+
+  - component: "Activity details"
+    feature: "Activities"
+    team: "AC"
+    keywords: ["AC", "activity detail", "activity details"]
+
+  - component: "Workout Linking"
+    feature: "Activity add/detection"
+    team: "AC"
+    keywords: ["AC", "workout linking", "link workout", "activity linking", "detection"]
+
+  - component: "Merge Activities"
+    feature: "Activities"
+    team: ""
+    keywords: ["merge activity", "merge activities", "merge workout"]
+
+  - component: "MSK"
+    feature: "Activities"
+    team: ""
+    keywords: ["MSK", "musculoskeletal"]
+
+  - component: "Most Recent Sessions"
+    feature: "Activities"
+    team: ""
+    keywords: ["recent sessions", "recent activities", "session history"]
+
+  # ─── ONBOARDING ─────────────────────────────────────────────────
+  - component: "Onboarding"
+    feature: "Onboarding"
+    team: "ACE"
+    keywords: ["ACE", "onboarding", "signup", "registration", "account creation", "activation"]
+
+  - component: "Onboarding - Account creation/activation"
+    feature: "Onboarding"
+    team: "ACE"
+    keywords: ["ACE", "account creation", "activation", "new account", "register"]
+
+  - component: "Onboarding - Login/Logout Change Password"
+    feature: "Onboarding"
+    team: "ACE"
+    keywords: ["ACE", "login", "logout", "change password", "sign in", "sign out"]
+
+  - component: "Onboarding - What to Expect"
+    feature: "Onboarding"
+    team: "ACE"
+    keywords: ["ACE", "what to expect", "onboarding intro"]
+
+  - component: "Onboarding - Splash screen"
+    feature: "Onboarding"
+    team: "ACE"
+    keywords: ["ACE", "splash screen", "launch screen"]
+
+  - component: "Onboarding - CC Screen"
+    feature: "Onboarding"
+    team: "ACE"
+    keywords: ["ACE", "credit card", "CC screen", "payment onboarding"]
+
+  - component: "Paring"
+    feature: "Onboarding"
+    team: "ACE"
+    keywords: ["ACE", "pairing", "pair device", "pair strap", "setup device"]
+
+  - component: "0 Day"
+    feature: "0 Day Experience"
+    team: ""
+    keywords: ["0 day", "zero day", "first day", "new user experience"]
+
+  # ─── PASSWORD / AUTH ─────────────────────────────────────────────
+  - component: "Password Policy"
+    feature: "Security / Account"
+    team: ""
+    keywords: ["password policy", "password", "credential"]
+
+  - component: "Password Policy - Forgot Password"
+    feature: "Security / Account"
+    team: ""
+    keywords: ["forgot password", "reset password", "password recovery"]
+
+  - component: "Password Policy - Forced Reset"
+    feature: "Security / Account"
+    team: ""
+    keywords: ["forced reset", "force password", "password reset"]
+
+  - component: "Password Policy - Policy Enforcement"
+    feature: "Security / Account"
+    team: ""
+    keywords: ["password policy enforcement", "password enforcement"]
+
+  - component: "Password Policy - Reset - Settings"
+    feature: "Security / Account"
+    team: ""
+    keywords: ["password reset settings"]
+
+  - component: "Password Policy - Account Creation"
+    feature: "Security / Account"
+    team: ""
+    keywords: ["password account creation"]
+
+  - component: "MFA"
+    feature: "Security / Authentication"
+    team: ""
+    keywords: ["MFA", "multi-factor", "two-factor", "2FA", "authentication"]
+
+  - component: "Authentication"
+    feature: "Security / Authentication"
+    team: ""
+    keywords: ["SECURITY", "authentication", "auth", "login", "session"]
+
+  # ─── GROWTH / MEMBERSHIP ────────────────────────────────────────
+  - component: "Growth - Web"
+    feature: "Growth - Web"
+    team: "GRO"
+    keywords: ["GRO", "web", "web app", "web store"]
+
+  - component: "Growth - Web Store"
+    feature: "Growth - Web"
+    team: "GRO"
+    keywords: ["GRO", "web store", "store", "ecommerce"]
+
+  - component: "Growth - Web Membership Upgrade"
+    feature: "Growth - Web"
+    team: "GRO"
+    keywords: ["GRO", "web membership upgrade", "membership upgrade", "upgrade"]
+
+  - component: "Growth-Upgrade"
+    feature: "Growth"
+    team: "GRO"
+    keywords: ["GRO", "upgrade", "membership upgrade", "in-app upgrade"]
+
+  - component: "Growth - Upcycle"
+    feature: "Growth"
+    team: "GRO"
+    keywords: ["GRO", "upcycle", "device upgrade", "generational upgrade"]
+
+  - component: "Growth - JoinFlow"
+    feature: "Growth"
+    team: "GRO"
+    keywords: ["GRO", "join flow", "joinflow", "purchase flow", "consumer join"]
+
+  - component: "Growth - App Membership Upgrade"
+    feature: "Growth"
+    team: "GRO"
+    keywords: ["GRO", "in-app upgrade", "app membership upgrade", "membership"]
+
+  - component: "Membership Management"
+    feature: "Membership"
+    team: ""
+    keywords: ["membership", "subscription", "manage membership"]
+
+  - component: "Limited Time Offer"
+    feature: "Growth"
+    team: "GRO"
+    keywords: ["GRO", "limited time offer", "LTO", "offer", "promo", "discount"]
+
+  - component: "Entitlements"
+    feature: "Membership"
+    team: ""
+    keywords: ["entitlement", "membership tier", "access", "permission", "feature flag"]
+
+  - component: "Web"
+    feature: "Web"
+    team: "GRO"
+    keywords: ["GRO", "web app", "web platform"]
+
+  # ─── CONNECTIVITY / DEVICE ──────────────────────────────────────
+  - component: "Connectivity"
+    feature: "Connectivity"
+    team: "GRO"
+    keywords: ["GRO", "connectivity", "BLE", "strap", "sync", "upload", "device", "firmware"]
+
+  - component: "Connectivity - Device Setup"
+    feature: "Connectivity"
+    team: "GRO"
+    keywords: ["GRO", "device setup", "setup", "pairing", "pair strap"]
+
+  - component: "Connectivity - Data catch up"
+    feature: "Connectivity"
+    team: "GRO"
+    keywords: ["GRO", "data catch up", "catchup", "data sync", "backfill"]
+
+  - component: "Data Upload Streak"
+    feature: "Connectivity"
+    team: ""
+    keywords: ["data upload", "upload streak", "sync streak", "data streak"]
+
+  - component: "BLE"
+    feature: "Connectivity"
+    team: ""
+    keywords: ["BLE", "bluetooth", "bluetooth low energy"]
+
+  - component: "Firmware Update"
+    feature: "Connectivity"
+    team: ""
+    keywords: ["firmware", "firmware update", "OTA", "over the air"]
+
+  - component: "Device_Setup"
+    feature: "Connectivity"
+    team: ""
+    keywords: ["device setup", "setup", "pair", "pairing", "strap setup"]
+
+  - component: "Battery Level"
+    feature: "Battery"
+    team: ""
+    keywords: ["battery level", "battery", "charge level", "battery status"]
+
+  - component: "Battery Pack"
+    feature: "Battery"
+    team: ""
+    keywords: ["battery pack", "charging pack", "ProKnit battery"]
+
+  # ─── PUSH NOTIFICATIONS ─────────────────────────────────────────
+  - component: "Push Notification"
+    feature: "Push Notifications"
+    team: ""
+    keywords: ["push notification", "notification", "PN", "alert", "push"]
+
+  - component: "Off Body PN"
+    feature: "Push Notifications"
+    team: ""
+    keywords: ["off body", "off-body", "not wearing", "body detection"]
+
+  - component: "Low Battery PN"
+    feature: "Push Notifications"
+    team: ""
+    keywords: ["low battery notification", "battery alert", "battery notification"]
+
+  - component: "Dead Battery PN"
+    feature: "Push Notifications"
+    team: ""
+    keywords: ["dead battery", "battery dead", "battery empty", "battery notification"]
+
+  - component: "Force Quit PN"
+    feature: "Push Notifications"
+    team: ""
+    keywords: ["force quit", "app quit", "foreground kill"]
+
+  - component: "Battery Fully Charged PN"
+    feature: "Push Notifications"
+    team: ""
+    keywords: ["battery charged", "fully charged", "charge complete"]
+
+  - component: "Notification Center"
+    feature: "Push Notifications"
+    team: ""
+    keywords: ["notification center", "notifications inbox", "in-app inbox"]
+
+  # ─── PROFILE ────────────────────────────────────────────────────
+  - component: "Profile"
+    feature: "Profile"
+    team: ""
+    keywords: ["PEOP", "profile", "user profile"]
+
+  - component: "Profile - Referrals"
+    feature: "Profile"
+    team: ""
+    keywords: ["referral", "refer", "invite friend"]
+
+  - component: "Profile - Levels"
+    feature: "Profile"
+    team: ""
+    keywords: ["levels", "level", "WHOOP level", "membership level"]
+
+  - component: "Profile - Details"
+    feature: "Profile"
+    team: ""
+    keywords: ["profile details", "user details", "profile info"]
+
+  - component: "Profile - Details - Privacy"
+    feature: "Profile"
+    team: ""
+    keywords: ["profile privacy", "privacy settings", "private profile"]
+
+  - component: "Profile - Data Streaks"
+    feature: "Profile"
+    team: ""
+    keywords: ["data streak", "streak", "profile streak", "ANDROID-2026"]
+
+  - component: "Profile - Data Highlights"
+    feature: "Profile"
+    team: ""
+    keywords: ["data highlights", "highlights", "profile highlights"]
+
+  - component: "Profile - Activities Summary"
+    feature: "Profile"
+    team: ""
+    keywords: ["activities summary", "activity summary", "profile activities"]
+
+  - component: "Personal Records"
+    feature: "Profile"
+    team: ""
+    keywords: ["personal record", "best effort", "PR", "achievement record"]
+
+  # ─── SETTINGS ───────────────────────────────────────────────────
+  - component: "Settings"
+    feature: "Settings"
+    team: "WU"
+    keywords: ["WU", "settings", "preferences", "configuration"]
+
+  - component: "Account & Settings - Device Settings"
+    feature: "Settings"
+    team: ""
+    keywords: ["device settings", "account device settings"]
+
+  - component: "Account & Settings - App Settings"
+    feature: "Settings"
+    team: ""
+    keywords: ["app settings", "account settings"]
+
+  - component: "Account & Settings - Membership"
+    feature: "Settings"
+    team: ""
+    keywords: ["membership settings", "account membership"]
+
+  - component: "Account & Settings - Pregnancy"
+    feature: "Settings"
+    team: ""
+    keywords: ["pregnancy settings", "account pregnancy"]
+
+  - component: "Account & Settings - In App Language Picker"
+    feature: "Settings"
+    team: ""
+    keywords: ["language picker", "language settings", "locale", "i18n", "l10n"]
+
+  - component: "Account & Settings - Activity Settings"
+    feature: "Settings"
+    team: ""
+    keywords: ["activity settings", "account activity"]
+
+  # ─── WOMEN'S HEALTH / MCI ───────────────────────────────────────
+  - component: "MCI (Menstrual Cycle Insights)"
+    feature: "Menstrual Cycle Insights"
+    team: "WH"
+    keywords: ["WH", "MCI", "menstrual", "cycle", "menstrual cycle"]
+
+  - component: "MCI - Symptom Insights"
+    feature: "Menstrual Cycle Insights"
+    team: "WH"
+    keywords: ["WH", "MCI", "symptom insights", "cycle symptom"]
+
+  - component: "MCI - Possible Symptoms"
+    feature: "Menstrual Cycle Insights"
+    team: "WH"
+    keywords: ["WH", "MCI", "possible symptoms", "cycle symptoms"]
+
+  - component: "MCI - Phase Coaching"
+    feature: "Menstrual Cycle Insights"
+    team: "WH"
+    keywords: ["WH", "MCI", "phase coaching", "cycle phase"]
+
+  - component: "MCI - Period Logging"
+    feature: "Menstrual Cycle Insights"
+    team: "WH"
+    keywords: ["WH", "MCI", "period", "period log", "menstrual log"]
+
+  - component: "MCI - Ovulation Logging"
+    feature: "Menstrual Cycle Insights"
+    team: "WH"
+    keywords: ["WH", "MCI", "ovulation", "ovulation log"]
+
+  - component: "MCI - Log Symptoms"
+    feature: "Menstrual Cycle Insights"
+    team: "WH"
+    keywords: ["WH", "MCI", "log symptoms", "symptom log"]
+
+  - component: "MCI - Cycle Journal"
+    feature: "Menstrual Cycle Insights"
+    team: "WH"
+    keywords: ["WH", "MCI", "cycle journal"]
+
+  - component: "MCI - Cycle Education"
+    feature: "Menstrual Cycle Insights"
+    team: "WH"
+    keywords: ["WH", "MCI", "cycle education"]
+
+  - component: "MCI - Cycle Calendar"
+    feature: "Menstrual Cycle Insights"
+    team: "WH"
+    keywords: ["WH", "MCI", "cycle calendar"]
+
+  - component: "MCI - Consistency"
+    feature: "Menstrual Cycle Insights"
+    team: "WH"
+    keywords: ["WH", "MCI", "consistency"]
+
+  - component: "MCI - Birth Control States"
+    feature: "Menstrual Cycle Insights"
+    team: "WH"
+    keywords: ["WH", "MCI", "birth control", "contraceptive"]
+
+  - component: "MCI x Alabs"
+    feature: "Menstrual Cycle Insights"
+    team: "WH"
+    keywords: ["WH", "MCI", "advanced labs", "alabs"]
+
+  - component: "Hormonal Insights"
+    feature: "Hormonal Insights"
+    team: "WH"
+    keywords: ["WH", "hormonal", "hormone", "hormonal insights"]
+
+  - component: "Pregnancy"
+    feature: "Women's Health"
+    team: "WH"
+    keywords: ["WH", "pregnancy", "pregnant", "prenatal"]
+
+  - component: "Postpartum"
+    feature: "Women's Health"
+    team: "WH"
+    keywords: ["WH", "postpartum", "postnatal"]
+
+  - component: "Fertility"
+    feature: "Women's Health"
+    team: "WH"
+    keywords: ["WH", "fertility", "fertile"]
+
+  - component: "Stress Monitor"
+    feature: "Stress Monitor"
+    team: "WH"
+    keywords: ["WH", "stress monitor", "stress", "stress score", "stress detection"]
+
+  - component: "Stress Monitor Sessions"
+    feature: "Stress Monitor"
+    team: "WH"
+    keywords: ["WH", "stress session", "stress monitor session"]
+
+  - component: "Stress"
+    feature: "Stress Monitor"
+    team: "WH"
+    keywords: ["WH", "stress"]
+
+  # ─── BLOOD WORK / ADVANCED LABS ─────────────────────────────────
+  - component: "Blood Work"
+    feature: "Blood Work"
+    team: ""
+    keywords: ["blood work", "lab", "biomarker", "advanced labs", "blood test"]
+
+  - component: "Blood Work - Test Import"
+    feature: "Blood Work"
+    team: ""
+    keywords: ["blood work import", "lab import", "test import"]
+
+  - component: "Blood Work - Test History"
+    feature: "Blood Work"
+    team: ""
+    keywords: ["blood work history", "lab history", "test history"]
+
+  - component: "Blood Work - Scheduling"
+    feature: "Blood Work"
+    team: ""
+    keywords: ["blood work scheduling", "lab scheduling", "schedule blood work"]
+
+  - component: "Blood Work - Onboarding"
+    feature: "Blood Work"
+    team: ""
+    keywords: ["blood work onboarding", "lab onboarding"]
+
+  - component: "Blood Work - Insights"
+    feature: "Blood Work"
+    team: ""
+    keywords: ["blood work insights", "biomarker insights", "lab insights"]
+
+  - component: "Blood Work - Category Details"
+    feature: "Blood Work"
+    team: ""
+    keywords: ["blood work category", "lab category", "biomarker category"]
+
+  - component: "Blood Work - Biomarkers Summary"
+    feature: "Blood Work"
+    team: ""
+    keywords: ["biomarker summary", "blood work summary", "lab summary"]
+
+  - component: "Blood Work - Biomarkers Detail"
+    feature: "Blood Work"
+    team: ""
+    keywords: ["biomarker detail", "blood work detail", "lab detail"]
+
+  - component: "Blood Work - Actions"
+    feature: "Blood Work"
+    team: ""
+    keywords: ["blood work action", "lab action"]
+
+  - component: "Blood Pressure Insights"
+    feature: "Blood Pressure"
+    team: ""
+    keywords: ["blood pressure", "BP", "systolic", "diastolic", "blood pressure insights"]
+
+  # ─── COACH / GENERATIVE AI ──────────────────────────────────────
+  - component: "Coach - Everywhere"
+    feature: "Coach Everywhere"
+    team: "FROGE"
+    keywords: ["FROGE", "coach", "AI coach", "coach everywhere", "generative AI", "CE"]
+
+  - component: "Coach - UI"
+    feature: "Coach"
+    team: "FROGE"
+    keywords: ["FROGE", "coach UI", "coach interface", "coach design"]
+
+  - component: "Coach - Daily Outlook"
+    feature: "Coach"
+    team: "FROGE"
+    keywords: ["FROGE", "daily outlook", "coach daily outlook"]
+
+  - component: "Coach - Day In Review"
+    feature: "Coach"
+    team: "FROGE"
+    keywords: ["FROGE", "day in review", "coach review", "DIR"]
+
+  - component: "Coach - EAR"
+    feature: "Coach"
+    team: "FROGE"
+    keywords: ["FROGE", "EAR", "coach EAR", "early access"]
+
+  - component: "Coach - Settings"
+    feature: "Coach"
+    team: "FROGE"
+    keywords: ["FROGE", "coach settings", "coach preference"]
+
+  - component: "Coach - Onboarding"
+    feature: "Coach"
+    team: "FROGE"
+    keywords: ["FROGE", "coach onboarding", "coach setup"]
+
+  - component: "Coach - Voice"
+    feature: "Coach"
+    team: "FROGE"
+    keywords: ["FROGE", "coach voice", "voice coach", "voice input"]
+
+  - component: "Coach - Weekly Plan"
+    feature: "Coach"
+    team: "FROGE"
+    keywords: ["FROGE", "coach weekly plan", "weekly plan coach"]
+
+  - component: "Coach - Weather"
+    feature: "Coach"
+    team: "FROGE"
+    keywords: ["FROGE", "coach weather", "weather"]
+
+  - component: "Coach - Sleep"
+    feature: "Coach"
+    team: "FROGE"
+    keywords: ["FROGE", "coach sleep", "sleep coach"]
+
+  - component: "Coach - Strength Trainer"
+    feature: "Coach"
+    team: "FROGE"
+    keywords: ["FROGE", "coach strength", "strength coach", "AI strength"]
+
+  - component: "Coach - Metrics"
+    feature: "Coach"
+    team: "FROGE"
+    keywords: ["FROGE", "coach metrics", "coach data"]
+
+  - component: "Coach - Menstrual Cycle"
+    feature: "Coach"
+    team: "FROGE"
+    keywords: ["FROGE", "coach menstrual", "menstrual coach", "cycle coach"]
+
+  - component: "Coach - Image Upload"
+    feature: "Coach"
+    team: "FROGE"
+    keywords: ["FROGE", "coach image", "image upload", "photo upload"]
+
+  - component: "Coach - File upload"
+    feature: "Coach"
+    team: "FROGE"
+    keywords: ["FROGE", "coach file", "file upload", "document upload"]
+
+  - component: "Coach - Context Hub"
+    feature: "Coach"
+    team: "FROGE"
+    keywords: ["FROGE", "context hub", "coach context"]
+
+  - component: "Coach - Behaviors"
+    feature: "Coach"
+    team: "FROGE"
+    keywords: ["FROGE", "coach behavior", "behavior coach"]
+
+  - component: "Coach - Activities"
+    feature: "Coach"
+    team: "FROGE"
+    keywords: ["FROGE", "coach activities", "activity coach"]
+
+  - component: "Coach - Conversational Context"
+    feature: "Coach"
+    team: "FROGE"
+    keywords: ["FROGE", "conversational context", "coach conversation", "chat context"]
+
+  # ─── HOME / NAVIGATION ──────────────────────────────────────────
+  - component: "Home"
+    feature: "Home"
+    team: "HDD"
+    keywords: ["HDD", "home", "home screen", "dashboard", "home tile"]
+
+  - component: "Home - Header"
+    feature: "Home"
+    team: "HDD"
+    keywords: ["HDD", "home header", "header"]
+
+  - component: "Home - In App Notification"
+    feature: "Home"
+    team: "HDD"
+    keywords: ["HDD", "in-app notification", "home notification"]
+
+  - component: "My_Dashboard"
+    feature: "Home"
+    team: "HDD"
+    keywords: ["HDD", "dashboard", "my dashboard"]
+
+  - component: "Progress Tab"
+    feature: "Home"
+    team: ""
+    keywords: ["progress tab", "progress"]
+
+  - component: "Progress & Insights - Plan Bottom Tab"
+    feature: "Home"
+    team: ""
+    keywords: ["plan bottom tab", "progress insights", "bottom tab", "plan tab"]
+
+  - component: "Navigation"
+    feature: "Navigation"
+    team: "HDD"
+    keywords: ["HDD", "navigation", "nav", "routing", "deeplink", "deep link",
+               "tab", "bottom nav", "CTA", "destination", "backend-driven navigation",
+               "backend driven navigation", "AC-670"]
+
+  - component: "Deeplink"
+    feature: "Navigation"
+    team: ""
+    keywords: ["deeplink", "deep link", "universal link", "URL scheme"]
+
+  - component: "Action Button"
+    feature: "Action Button"
+    team: ""
+    keywords: ["action button", "iOS action button", "hardware button"]
+
+  - component: "Dynamic Island iOS"
+    feature: "iOS Dynamic Island"
+    team: ""
+    keywords: ["dynamic island", "live activity", "iOS dynamic island"]
+
+  # ─── WIDGETS ────────────────────────────────────────────────────
+  - component: "Widgets"
+    feature: "Widgets"
+    team: "BOT"
+    keywords: ["BOT", "widget", "home widget", "iOS widget", "Android widget",
+               "fetch widget", "widget loading"]
+
+  - component: "Whoop_Live"
+    feature: "Whoop Live"
+    team: "HDD"
+    keywords: ["HDD", "whoop live", "live mode", "live session"]
+
+  - component: "Stealth_Mode"
+    feature: "Stealth Mode"
+    team: "HDD"
+    keywords: ["HDD", "stealth mode", "stealth"]
+
+  - component: "Tilt Mode"
+    feature: "Tilt Mode"
+    team: "HDD"
+    keywords: ["HDD", "tilt mode", "tilt", "tilt graph"]
+
+  # ─── HEALTH MONITOR ─────────────────────────────────────────────
+  - component: "Health Monitor"
+    feature: "Health Monitor"
+    team: ""
+    keywords: ["health monitor", "health alert", "health check", "health overview"]
+
+  - component: "Healthspan"
+    feature: "Healthspan"
+    team: ""
+    keywords: ["healthspan", "health span", "longevity", "health score"]
+
+  # ─── MOVEMENT / STEPS ───────────────────────────────────────────
+  - component: "Steps"
+    feature: "Steps"
+    team: "MOVE"
+    keywords: ["MOVE", "steps", "step count", "pedometer", "step goal"]
+
+  - component: "HR Zones"
+    feature: "Heart Rate Zones"
+    team: "MOVE"
+    keywords: ["MOVE", "HR zones", "heart rate zones", "zone training", "zone 2"]
+
+  - component: "HR"
+    feature: "Heart Rate"
+    team: ""
+    keywords: ["heart rate", "HR", "bpm"]
+
+  - component: "Live HR"
+    feature: "Heart Rate"
+    team: ""
+    keywords: ["live HR", "live heart rate", "real-time HR", "heart rate broadcast"]
+
+  # ─── ANNUAL RITUALS ─────────────────────────────────────────────
+  - component: "YIR"
+    feature: "Year in Review"
+    team: "AR"
+    keywords: ["AR", "year in review", "YIR", "annual review", "annual"]
+
+  - component: "WIR"
+    feature: "Week in Review"
+    team: "ACE"
+    keywords: ["ACE", "week in review", "WIR", "weekly review"]
+
+  # ─── INTEGRATIONS ───────────────────────────────────────────────
+  - component: "Integrations - Strava"
+    feature: "Integrations"
+    team: ""
+    keywords: ["Strava", "strava integration"]
+
+  - component: "Integrations - Training Peaks"
+    feature: "Integrations"
+    team: ""
+    keywords: ["Training Peaks", "trainingpeaks"]
+
+  - component: "Integrations - Pliability"
+    feature: "Integrations"
+    team: ""
+    keywords: ["Pliability", "pliability integration"]
+
+  - component: "Integrations - Withings"
+    feature: "Integrations"
+    team: ""
+    keywords: ["Withings", "withings integration", "scale integration"]
+
+  - component: "Integrations - GHC"
+    feature: "Integrations"
+    team: ""
+    keywords: ["GHC", "google health connect", "google health", "health connect"]
+
+  - component: "Integrations - Chronometer"
+    feature: "Integrations"
+    team: ""
+    keywords: ["Chronometer", "chronometer integration", "nutrition", "food tracking"]
+
+  - component: "Integrations - AHK"
+    feature: "Integrations"
+    team: ""
+    keywords: ["AHK", "apple health", "apple health kit", "health kit"]
+
+  # ─── PRIVACY / SECURITY ─────────────────────────────────────────
+  - component: "Privacy Center"
+    feature: "Privacy"
+    team: ""
+    keywords: ["privacy center", "privacy", "GDPR", "data privacy", "data rights"]
+
+  - component: "Privacy adapter"
+    feature: "Privacy"
+    team: ""
+    keywords: ["privacy adapter", "privacy"]
+
+  - component: "GDPR"
+    feature: "Privacy"
+    team: ""
+    keywords: ["GDPR", "privacy", "data deletion", "SECURITY", "compliance"]
+
+  # ─── ACHIEVEMENTS ───────────────────────────────────────────────
+  - component: "Achievements"
+    feature: "Achievements"
+    team: ""
+    keywords: ["achievement", "badge", "milestone", "award"]
+
+  - component: "Achievements - Whoop Age"
+    feature: "Achievements"
+    team: ""
+    keywords: ["whoop age", "WHOOP age", "biological age"]
+
+  - component: "Achievements - Strain"
+    feature: "Achievements"
+    team: ""
+    keywords: ["strain achievement", "workout achievement"]
+
+  - component: "Achievements - Sleep"
+    feature: "Achievements"
+    team: ""
+    keywords: ["sleep achievement", "sleep badge"]
+
+  - component: "Achievements - Sharing"
+    feature: "Achievements"
+    team: ""
+    keywords: ["share achievement", "achievement sharing"]
+
+  - component: "Achievements - Recovery"
+    feature: "Achievements"
+    team: ""
+    keywords: ["recovery achievement", "recovery badge"]
+
+  - component: "Achievements - Overlay"
+    feature: "Achievements"
+    team: ""
+    keywords: ["achievement overlay", "badge overlay"]
+
+  - component: "Achievements - Multiples"
+    feature: "Achievements"
+    team: ""
+    keywords: ["multiple achievements", "achievements multiples"]
+
+  - component: "Achievements - Detail Page"
+    feature: "Achievements"
+    team: ""
+    keywords: ["achievement detail", "badge detail", "achievement page"]
+
+  - component: "Achievements - Activity"
+    feature: "Achievements"
+    team: ""
+    keywords: ["activity achievement", "workout badge"]
+
+  - component: "Achievement - Entry Points"
+    feature: "Achievements"
+    team: ""
+    keywords: ["achievement entry point", "badge entry", "achievement access"]
+
+  # ─── MISC / PLATFORM ────────────────────────────────────────────
+  - component: "Recommendations"
+    feature: "Recommendations"
+    team: ""
+    keywords: ["recommendation", "suggest", "personalized suggestion"]
+
+  - component: "Whoop Labs"
+    feature: "Whoop Labs"
+    team: "IRT"
+    keywords: ["whoop labs", "labs", "experiment", "feature test", "IRT"]
+
+  - component: "ANF"
+    feature: "ANF"
+    team: ""
+    keywords: ["ANF"]
+
+  - component: "ECG"
+    feature: "ECG"
+    team: ""
+    keywords: ["ECG", "electrocardiogram", "heart rhythm", "cardiac"]
+
+  - component: "GPS"
+    feature: "GPS"
+    team: ""
+    keywords: ["GPS", "location", "geolocation", "route", "mapping"]
+
+  - component: "Calories"
+    feature: "Calories"
+    team: ""
+    keywords: ["calorie", "calories", "energy expenditure", "burn"]
+
+  - component: "Translations"
+    feature: "Localization"
+    team: ""
+    keywords: ["translation", "localization", "i18n", "l10n", "locale", "string", "language"]
+
+  - component: "Koala Update"
+    feature: "App Updates"
+    team: ""
+    keywords: ["koala", "app update", "force update", "update prompt"]
+
+  - component: "Calibration"
+    feature: "Calibration"
+    team: ""
+    keywords: ["calibration", "calibrate", "sensor calibration"]
+
+  - component: "CPT"
+    feature: "CPT"
+    team: ""
+    keywords: ["CPT"]
+
+  - component: "SAT"
+    feature: "SAT"
+    team: ""
+    keywords: ["SAT"]
+
+  - component: "BLOOM"
+    feature: "BLOOM"
+    team: ""
+    keywords: ["BLOOM"]
+
+  - component: "Puffin"
+    feature: "Puffin"
+    team: ""
+    keywords: ["Puffin"]
+
+  - component: "Segment"
+    feature: "Analytics"
+    team: ""
+    keywords: ["segment", "analytics", "tracking", "event tracking"]
+
+  - component: "MobileAutomation"
+    feature: "Test Automation"
+    team: ""
+    keywords: ["automation", "automated test", "E2E", "robot", "CITL"]
+
+  - component: "Test Outlines"
+    feature: "QA"
+    team: ""
+    keywords: ["test outline", "test plan", "test structure"]
+
+  - component: "Education Pillar"
+    feature: "Education"
+    team: ""
+    keywords: ["education", "learn", "tutorial", "guide"]
+
+  - component: "Koala Update"
+    feature: "App Updates"
+    team: ""
+    keywords: ["koala", "app update", "force update"]
+
+  - component: "Performance Assessments"
+    feature: "Performance Assessments"
+    team: ""
+    keywords: ["performance assessment", "assessment", "fitness test"]
+
+  - component: "Segment"
+    feature: "Analytics"
+    team: ""
+    keywords: ["segment", "analytics", "tracking"]
