@@ -1,0 +1,175 @@
+ticket,title,platform,team,feature_area,component,priority_signal
+ANDROID-2056,Migrate ProfileApiService to kotlinx.serialization,Android,ANDROID,Profile,Profile,Low
+ANDROID-1980,Predictive back on Team Create,Android,ANDROID,Navigation,Navigation,Low
+ANDROID-1982,Migrate InviteCodeActivity to OnBackPressedCallback,Android,ANDROID,Community,Community,High
+ANDROID-1985,Fix HelpCenterNavigationRouter.kt: replace direct onBackPressed() call,Android,ANDROID,Navigation,Navigation,Low
+ANDROID-2059,Migrate auth service to KT Serialization,Android,ANDROID,Security / Authentication,Authentication,Low
+STREN-551,Update Exercise Summary section with new stats,Android,STREN,Strength Trainer,Strength Trainer,High
+STREN-479,Remove st-exercise-list-filtering feature flag,Android,STREN,Strength Trainer,Strength Trainer - Exercise Filtering,Low
+STREN-828,CTA nav to strength trainer,Android,STREN,Strength Trainer,Strength Trainer,High
+STREN-770,Contract changes to match tech plan,Android,STREN,Strength Trainer,Strength Trainer,High
+STREN-834,selector button group text constraints added,Android,STREN,Strength Trainer,Strength Trainer,High
+STREN-835,collapsable header top aligned,Android,STREN,Strength Trainer,Strength Trainer,High
+STREN-769,Part 4: Add entry point for Exercise Details V2,iOS,STREN,Strength Trainer,Strength Trainer - Workout Details,High
+STREN-769,Part 3 - Add UI for Exercise Details V2,iOS,STREN,Strength Trainer,Strength Trainer - Workout Details,High
+STREN-769,Part 2 - Exercise Details v2: Add Domain layer,iOS,STREN,Strength Trainer,Strength Trainer - Workout Details,High
+STREN-769,Part 1: Add API support for Exercise Details V2,iOS,STREN,Strength Trainer,Strength Trainer - Workout Details,High
+STREN-829,Badge Icons + Exercise Details V2 FF,iOS,STREN,Strength Trainer,Strength Trainer - Workout Details,High
+STREN-775,add codable nav for name your workout,iOS,STREN,Strength Trainer,Strength Trainer - Workout Naming,Low
+STREN-756,Add new trend key for Total Volume Load + dynamic content support for Trends,iOS,STREN,Trends,Trends,Medium
+STREN-540,Add MINI_ARCH_EXERCISE_RECORDS arch mini,iOS,STREN,Strength Trainer,Strength Trainer,High
+STREN-540,Smartling translations,iOS,STREN,Localization,Translations,Low
+FIT-156,Remove exercise-progression-visualization feature flag,Android,FIT,Exercise Progression,Exercise Progression,Low
+FIT-1138,ExerciseDetailsV2: Repeated history and PR API calls triggered on scroll,Android,FIT,Strength Trainer,Strength Trainer - Workout Details,High
+FIT-1131,Remove kt-serialization-widget,Android,FIT,Widgets,Widgets,Medium
+FIT-1137,remove kt serialization activity service,Android,FIT,Activities,Activities,Low
+FIT-1136,Remove kt-serialization-sleep-coach-users-api feature flag,Android,FIT,Coach,Coach - Sleep,Low
+FIT-1130,remove kt serialization hrzones service,Android,FIT,Heart Rate Zones,HR Zones,Low
+FIT-1126,Remove kt-serialization-start-activity feature flag,Android,FIT,Activities,Activities - Start Activity,Low
+FIT-1133,Contract Layer - nav registration models API,iOS,FIT,Strength Trainer,Strength Trainer - Workout Details,High
+FIT-950,Wire MultipleButtonContainer footer with CardIconButton navigation,iOS,FIT,Navigation,Navigation,Medium
+FROGE-492,Fix widget layout spacing and positioning in chat view,Android,FROGE,Coach,Coach - UI,Medium
+FROGE-378,Smartling translations,Android,FROGE,Localization,Translations,Low
+FROGE-328,Smartling translations,Android,FROGE,Localization,Translations,Low
+FROGE-473,Thread workout template source field,Android,FROGE,Strength Trainer,Strength Trainer - Workout From Library,Medium
+FROGE-392,fix journal time slider storing non-half-hour time values,Android,FROGE,Journal,Journal,Medium
+FROGE-464,Add Pending Message Capability for AIChat,iOS,FROGE,Coach,Coach - Conversational Context,High
+FROGE-472,Add source to WorkoutBuilder template,iOS,FROGE,Strength Trainer,Strength Trainer - Workout From Library,Medium
+FROGE-481,Update AI Journal carousel to not clip widgets,iOS,FROGE,Journal,AI Journal,Medium
+FROGE-485,Update AI Journal widget button success style,iOS,FROGE,Journal,AI Journal,Medium
+FROGE-487,Chat Additional Context position,iOS,FROGE,Coach,Coach - UI,Medium
+FROGE-503,Update SMS Flow,iOS,FROGE,Onboarding,Onboarding,High
+BOT-8477,Save journal when exiting if user made changes,Android,BOT,Journal,Journal,Medium
+BOT-8043,Refresh journal on chat-sheet dismiss (flag-gated),Android,BOT,Journal,AI Journal,Medium
+BOT-8536,Unify preview dialog style with iOS,Android,BOT,Coach,Coach - UI,Medium
+BOT-8556,Make ChatWithAgent notifications expandable,Android,BOT,Push Notifications,Push Notification,Medium
+BOT-7913,Smartling translations,Android,BOT,Localization,Translations,Low
+BOT-8519,Fix Context Hub Onboarding Navigation,iOS,BOT,Coach,Coach - Context Hub,Medium
+BOT-8480,Fix voice audio session resume behavior,iOS,BOT,Coach,Coach - Voice,Medium
+BOT-8498,Fix Suggestions Pipeline Canceling Conversation Actions,iOS,BOT,Coach,Coach - Conversational Context,High
+BOT-8546,TalkText domain state view state & reducer plumbing,iOS,BOT,Coach,Coach - Conversational Context,High
+BOT-8545,TalkText API layer models & feature flag,iOS,BOT,Coach,Coach - Conversational Context,High
+BOT-8535,Remove Context Hub Navigation in Context Hub,iOS,BOT,Coach,Coach - Context Hub,Medium
+BOT-8411,Smartling translations,iOS,BOT,Localization,Translations,Low
+AIX-997,Refactor AiChatTalkTextCard event handling and add subtitle spacing,Android,AIX,Coach,Coach - UI,Medium
+AIX-1006,Make tag style mapping consistent across context hub main and details,Android,AIX,Coach,Coach - Context Hub,Medium
+ACE-4195,Refactor PricingSelectionCard style mapping to exhaustive enum,Android,ACE,Onboarding,Onboarding,High
+ACE-4195,Add BLUE and CHROMATIC styles to PricingSelectionCard,Android,ACE,Onboarding,Onboarding,High
+ACE-4302,IAJF App destination,Android,ACE,Growth,Growth - JoinFlow,Medium
+ACE-4010,Bugfix when sharing streaks,Android,ACE,Profile,Profile - Data Streaks,Medium
+ACE-4312,make text_overlay_style and streak_subtitle nullables,Android,ACE,Profile,Profile - Data Streaks,Medium
+ACE-4042,Clean up home code regarding streaks,Android,ACE,Profile,Profile - Data Streaks,Medium
+ACE-4187,wire on complete and put request and add tests,Android,ACE,Onboarding,Onboarding,High
+ACE-4187,add metrics for M1 and tests for the logging,Android,ACE,Onboarding,Onboarding,High
+ACE-4194,HW only permissions,Android,ACE,Onboarding,Onboarding,High
+ACE-4117,Modifier changed in StatItemListStepViewV2 Column,Android,ACE,Onboarding,Onboarding,Medium
+ACE-4198,Fix MarkdownText LEADING alignment in ListTemplate,Android,ACE,Onboarding,Onboarding,High
+ACE-4198,Add analyticEvent to CardButtonState for BFF-driven analytics,Android,ACE,Onboarding,Onboarding,High
+ACE-4186,Implement on_complete client-side parsing,iOS,ACE,Onboarding,Onboarding,High
+ACE-4116,Clear lastRoutedAutopopKey on routing timeout,iOS,ACE,Journal,Journal - Auto pop,Medium
+ACE-4298,Adjust CelebrationMediaView to match design,iOS,ACE,Onboarding,Onboarding,High
+ACE-4306,Fix LottieFileWriter Test Failing,iOS,ACE,Unmapped,Unmapped,Low
+ACE-2441,Fix badge low battery updates,iOS,ACE,Battery,Battery Level,Medium
+ACE-4181,Wire HW_ONLY_PROFILE GET /v1/hw-only/profile BFF flow,iOS,ACE,Onboarding,Onboarding,High
+ACE-4303,Add flow query parameter to app/destination request from IAJF NAME_INFO screen,iOS,ACE,Growth,Growth - JoinFlow,Medium
+ACE-4291,Emit activation.flow_boundary_reached metric at hw-only on_complete,iOS,ACE,Onboarding,Onboarding,High
+ACE-4294,Clean Up Low Battery Experiments,iOS,ACE,Battery,Battery Level,Medium
+ACE-4140,Remove improvements-to-pairing-screen-v1 experiment,iOS,ACE,Onboarding,Paring,Low
+ACE-4191,Wire HW_ONLY_PERMISSIONS GET /v1/hw-only/permissions BFF flow,iOS,ACE,Onboarding,Onboarding,High
+ACE-4008,fixedSize label adjustments to TrialOfferPlanOptionView & PlanOptionView,iOS,ACE,Growth,Growth - JoinFlow,Medium
+PEOP-478,Fixed share code in the shared link,Android,PEOP,Community,Community,High
+PEOP-392,Arch-v2 generic toolbar nav button analytics,Android,PEOP,Community,Community,High
+PEOP-482,android fixed the issue: double clicking the accept button will report an error,Android,PEOP,Community,Community,High
+PEOP-463,Mutual Sharing Privacy Toggles,Android,PEOP,Community,Community,High
+PEOP-480,Add filter and sort bottom sheet to community follower container - Domain,Android,PEOP,Community,Community,High
+PEOP-480,Add filter and sort bottom sheet to community follower container - UI,Android,PEOP,Community,Community,High
+PEOP-484,Refresh community follower container when manage page removes a member,Android,PEOP,Community,Community,High
+PEOP-455,fixed crash: Feature education unknown has no route set,Android,PEOP,Community,Community,High
+PEOP-468,Fixed analytics event for share profile,Android,PEOP,Community,Community,High
+PEOP-467,Shouldn't fire a refer friend invite friend analytics event,iOS,PEOP,Community,Community,High
+PEOP-460,Don't track events from cache response,iOS,PEOP,Community,Community,High
+PEOP-430,Parse generic interaction from error response body if possible,iOS,PEOP,Community,Community,High
+PEOP-462,Fix invite screen navigation issue,iOS,PEOP,Community,Community,High
+PEOP-494,Add the missing analytics from Manager Community empty card,iOS,PEOP,Community,Community,High
+PEOP-188,Opening invite notification does not load follow requests for the Community Requests list,iOS,PEOP,Community,Community,High
+PEOP-477,Parse share_code instead of username from Community deeplink,iOS,PEOP,Community,Community,High
+PEOP-344,Clicking X button in the following list shouldn't default to the Share Data With section,iOS,PEOP,Community,Community,High
+PEOP-464,Update community privacy toggle copy & add Mutual Sharing toggle,iOS,PEOP,Community,Community,High
+PEOP-479,Community design feedback,iOS,PEOP,Community,Community,High
+PEOP-432,Move Dialog.swift from WhoopDesignUIKit to WhoopDesign,iOS,PEOP,Unmapped,Unmapped,Low
+MED-2478,Implement disable fertility insights API call,Android,MED,Women's Health,Fertility,High
+MED-2417,add fertility states and reducer,Android,MED,Women's Health,Fertility,High
+MED-2480,Add disable fertility insights survey drawer,Android,MED,Women's Health,Fertility,High
+MED-2834,View Layer for Fertility Settings Toggle,Android,MED,Women's Health,Fertility,High
+MED-2789,FabItem Updates,iOS,MED,Women's Health,Fertility,Medium
+MED-2789,Move GenericInteraction extensions to WhoopDesignModels,iOS,MED,Unmapped,Unmapped,Low
+MED-2839,Add scaffolding for Fertility Settings architecture,iOS,MED,Women's Health,Fertility,High
+MED-2485,Enable Fertility Toggle Event,iOS,MED,Women's Health,Fertility,High
+MED-2467,Pt 1. Make TickMarkPlot protocol and Build Preliminary FertilityTickMarkPlotView,iOS,MED,Women's Health,Fertility,High
+WH-1257,Possible Symptoms Destination,Android,WH,Menstrual Cycle Insights,MCI - Possible Symptoms,Medium
+WH-1470,remove mcc endpoints,Android,WH,Menstrual Cycle Insights,MCI (Menstrual Cycle Insights),Medium
+WH-1522,Fix MCI Calendar Scroll Offset Issue on Page Reload,iOS,WH,Menstrual Cycle Insights,MCI - Cycle Calendar,Medium
+WH-1543,Adding Fertility Card to MCI Reducer,iOS,WH,Women's Health,Fertility,High
+DWL-1533,Remove dwl-screening feature flag,Android,DWL,Home,Home,High
+DWL-2086,Add home v2 endpoints,Android,DWL,Home,Home,High
+DWL-2118,Session 204 response should show an error to the user,iOS,DWL,Home,Home,Medium
+DWL-2087,Add BFF V2 endpoint (Part 2): Completed campaigns,iOS,DWL,Home,Home,High
+DWL-2085,Add new DWL landing view placeholder,iOS,DWL,Home,Home,High
+CITL-804,Remove HealthReportFragment and SharingBroadCastReceiver Dead Code,Android,CITL,Unmapped,Unmapped - Health Report removal,Low
+CITL-120,Main AndroidManifest - Reintroduce Stream Video permissions,Android,CITL,Unmapped,Unmapped - Clinician Video,Medium
+CITL-717,Rename Datadog screen tags for ComposableHealthReportScreen and ClinicianVideoSchedulingFormScreen,Android,CITL,Unmapped,Unmapped - Clinician Video,Low
+CITL-795,Stream API - Rename to session,Android,CITL,Unmapped,Unmapped - Clinician Video,Medium
+CITL-800,Remove health-report-composable feature flag,Android,CITL,Unmapped,Unmapped - Health Report removal,Low
+CITL-766,Fix FGS notification hang-up navigating to failure screen,Android,CITL,Push Notifications,Push Notification,Medium
+CITL-802,modify biomarker card to optionally use tile background,Android,CITL,Blood Work,Blood Work - Biomarkers Summary,High
+CITL-669,Add model types for the PERSONAL_INTAKE screen,Android,CITL,Unmapped,Unmapped - Personal Intake,Medium
+CITL-629,Add GradientAvatar component,Android,CITL,Unmapped,Unmapped - Clinician Video,Low
+CITL-629,Remove Stream default actions from participant videos,Android,CITL,Unmapped,Unmapped - Clinician Video,Medium
+CITL-750,expandable content component,Android,CITL,Unmapped,Unmapped - Expandable Content,Low
+CITL-798,modify insights item to support alignment,Android,CITL,Blood Work,Blood Work - Insights,High
+CITL-801,modify biomarker card to support optional graph,Android,CITL,Blood Work,Blood Work - Biomarkers Detail,High
+CITL-684,Personal Intake Date Picker Sheet Action Handling,iOS,CITL,Unmapped,Unmapped - Personal Intake,Medium
+CITL-783,Expandable Content Default State,iOS,CITL,Unmapped,Unmapped - Expandable Content,Low
+CITL-755,Add Optional Graph + Tile Background to BIOMARKER_CARD,iOS,CITL,Blood Work,Blood Work - Biomarkers Summary,High
+CITL-755,Update Biomarker Graph Style to Match Android,iOS,CITL,Blood Work,Blood Work - Biomarkers Detail,High
+CITL-686,Personal Intake Selectable Options Sheet,iOS,CITL,Unmapped,Unmapped - Personal Intake,Medium
+CITL-753,Optional leading alignment and ExpandableContent to InsightsItem,iOS,CITL,Blood Work,Blood Work - Insights,High
+CITL-797,Remove onTapAction from TextField,iOS,CITL,Unmapped,Unmapped - Expandable Content,Low
+CITL-682,Personal Intake Date Bottom Sheet,iOS,CITL,Unmapped,Unmapped - Personal Intake,Medium
+CITL-688,Personal Intake Selectable Options Sheet Action Handling,iOS,CITL,Unmapped,Unmapped - Personal Intake,Medium
+CITL-794,Rename video-call credentials endpoint/types to session,iOS,CITL,Unmapped,Unmapped - Clinician Video,Medium
+CITL-574,arch mini polling content - view layer,iOS,CITL,Unmapped,Unmapped - Expandable Content,Low
+CITL-574,arch mini polling content - presentation + DI,iOS,CITL,Unmapped,Unmapped - Expandable Content,Low
+CITL-573,ArchMiniPollingContent: Domain layer,iOS,CITL,Unmapped,Unmapped - Expandable Content,Low
+CITL-780,Appointment Card Home Dismissal,iOS,CITL,Unmapped,Unmapped - Personal Intake,Medium
+CITL-812,Update Intake Screen Name,iOS,CITL,Unmapped,Unmapped - Personal Intake,Medium
+CE-1001,Make NavBarDto title nullable and update StressEducationNavBarHelperTest,Android,CE,Coach Everywhere,Coach - Everywhere,Medium
+CE-998,Fix FAB size feedback loop in FloatingBottomNavigationRow,Android,CE,Coach Everywhere,Coach - Everywhere,Medium
+CE-975,Smartling translations,Android,CE,Localization,Translations,Low
+CON-4460,Nuke Properfit Module and related code,Android,CON,Connectivity,Connectivity,Medium
+CON-4522,Fix crash when toggling HPS feature flag at runtime,Android,CON,Connectivity,Connectivity,Medium
+CON-4320,Remove feature flag: sensor-data-upload-throughput-tracking,Android,CON,Connectivity,Connectivity,Low
+CON-4525,Add firmware_version tag to all HPS metrics,Android,CON,Connectivity,Firmware Update,Low
+CON-4078,Additional guard rails for Device Vitals Update,iOS,CON,Connectivity,Connectivity,Medium
+CON-4455,Removing FF for packet stitching serial fix,iOS,CON,Connectivity,Connectivity,Low
+CON-4469,BLE services discovery re-start when needed,iOS,CON,Connectivity,BLE,Medium
+CON-4090,Pull to refresh should fetch updated high watermark. Part 1,iOS,CON,Home,Home,Medium
+CON-4425,Remove Throttle Battery Charged Full Notification FF,iOS,CON,Push Notifications,Battery Fully Charged PN,Medium
+CON-4461,Nuke Properfit Module and related code,iOS,CON,Connectivity,Connectivity,Medium
+CORESLEEP-2228,Remove avoid-legacy_cycle-storage feature flag,Android,CORESLEEP,Sleep,Sleep,Low
+ALABS-2931,Stub ACCESS Package,iOS,ALABS,Blood Work,Blood Work,Medium
+GAL-2,Fix lingering padding when tile is dismissed as single item in section,iOS,GAL,Home,Home,Medium
+GAL-3,Fix product test card spacing,iOS,GAL,Growth,Growth - JoinFlow,Medium
+GRO-1702,Smartling translations,iOS,GRO,Localization,Translations,Low
+IG-2181,Migrate WhoopLogger to Swift 6 language mode,iOS,IG,Unmapped,Unmapped - Platform Infra,Low
+IG-2193,Flaky test: test_Home_Navigation_showProfileIntensityActivity,iOS,IG,Unmapped,Unmapped - Platform Infra,Low
+IG-2164,Remove custom encode/decode - Growth,iOS,IG,Unmapped,Unmapped - Platform Infra,Low
+IG-2130,Replace factoryWithParams in WhoopGamification,iOS,IG,Unmapped,Unmapped - Platform Infra,Low
+IG-2200,iOS - Create WhoopNestedBFF package,iOS,IG,Unmapped,Unmapped - Platform Infra,Low
+MP-722,Remove MetricsManaging DI inject from AnyCodableNavigationScreen catch block,iOS,MP,Unmapped,Unmapped - Platform Infra,Low
+MP-590,Only send Slack alerts on nightly build failures,iOS,MP,Unmapped,Unmapped - Platform Infra,Low
+MP-646,Fix deeplink.received overcounting and remove ObjC tracking wrapper,iOS,MP,Navigation,Deeplink,Medium
+MP-759,Add Datadog code coverage tool,iOS,MP,Unmapped,Unmapped - Platform Infra,Low
+MP-779,Update CODEOWNERS for mobile infra legacy files,iOS,MP,Unmapped,Unmapped - Platform Infra,Low
+AUTO-500,Review failures for profile.ProfileTest on android,Android,AUTO,Test Automation,MobileAutomation,Low
+ECOMM-3398,Smartling translations,Android,ECOMM,Localization,Translations,Low
