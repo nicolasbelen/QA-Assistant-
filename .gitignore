@@ -1,0 +1,21 @@
+# Generated outputs — local only, not shared with team
+outputs/**
+!outputs/**/.gitkeep
+
+# Inputs — ignore release notes and ad-hoc personal docs, keep everything else
+inputs/release-notes/
+inputs/*.pdf
+inputs/*.docx
+inputs/*.doc
+inputs/*.pptx
+inputs/*.xlsx
+
+# Local Claude settings (permissions, personal overrides)
+.claude/settings.local.json
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc

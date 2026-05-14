@@ -18,16 +18,17 @@
 - Example: `inputs/january-jumpstart-existing-tests.csv` (54 tests — January Jumpstart 2026)
 
 ## Xray / Jira — Gherkin and API
-- **Creating or editing Jira test issues via Atlassian MCP** (e.g. `createJiraIssue`, `editJiraIssue`) does **not** populate the **Xray section** (e.g. Gherkin scenarios). Xray uses its own REST API and custom fields; the current Atlassian MCP exposes Jira core/issue fields only.
-- **Preferred workflow:** Generate **Xray-compatible CSV** (including a `gherkin` column) in `outputs/xray/`, then use **Xray's CSV import** in Jira to create/update test cases with Gherkin.
-- **Optional — set Gherkin via script:** If this workspace includes `scripts/xray-set-gherkin.sh` and the user has set `JIRA_EMAIL` and `JIRA_API_TOKEN` (and optionally `XRAY_GHERKIN_FIELD_ID`), the agent can run the script to push Gherkin to an existing Test. (Scripts are not bundled here by default; copy from **Test-Case-Designer** if needed.)
+- Xray Cloud stores Gherkin in its own proprietary backend — **not** as a Jira custom field. No `customfield_XXXXX` exists for it; the Jira REST API cannot set it.
+- **Automated workflow (preferred):** Use `/whoop-xray-upload` skill — creates Jira Test issues via Atlassian MCP and sets Gherkin via `scripts/xray-set-gherkin.sh` (Xray GraphQL API).
+- **Manual fallback:** Generate CSV in `outputs/xray/`, upload via Xray Test Case Importer in Jira UI.
+- **Gherkin API details:** Uses `updateGherkinTestDefinition` GraphQL mutation at `https://xray.cloud.getxray.app/api/v2/graphql`. Requires the **numeric Jira issue ID** (e.g. `538180`), not the key. Auth via Xray JWT (`XRAY_CLIENT_ID` + `XRAY_CLIENT_SECRET`).
 
 ## Xray/Jira export defaults
 - projectKey (required for CSV export): SQA
-- Priority mapping:
-  - P1 = Critical
-  - P2 = High
-  - P3 = Normal
+- Priority mapping (SQA uses P0–P4 directly — do not map to Critical/High/Normal):
+  - P1 = P1
+  - P2 = P2
+  - P3 = P3
 
 ## Output folder
 - Write generated exports to: outputs/xray/

@@ -1,7 +1,8 @@
 ---
 name: whoop-xray-csv
 description: >-
-  Builds validated WHOOP Xray CSV from markdown tests: comma delimiter matching
+  Builds a validated WHOOP Xray CSV + a human-readable markdown review file
+  from a test suite: comma delimiter matching
   inputs/xray-test-case-importer-config.json, Jira priority names, semicolon
   labels, optional requirementIssueKey. Use for /whoop-xray-csv, CSV import, or
   fixing Xray importer errors.
@@ -9,7 +10,7 @@ description: >-
 
 # Xray CSV
 
-Convert a markdown test suite to a validated, Xray-ready CSV.
+Convert a markdown test suite to a validated Xray-ready CSV **and** a clear human-readable review file.
 
 ## Inputs
 
@@ -50,10 +51,36 @@ The user may provide:
    - [ ] `requirementIssueKey` column present only if keys were provided; mapping doc read
 
 7. **Review summary.** Print counts by priority / type / area.
-8. Ask the user to **confirm** before upload.
+
+8. **Write the review markdown** to `outputs/<feature>-test-cases.md` using this format for each test case:
+
+   ```markdown
+   ## TC-001 — Summary of test case
+
+   **Priority:** P2 | **Type:** Functional | **Labels:** `smoke;regression`
+
+   **Description:** What is being verified and why. Source: PRD title (URL).
+
+   **Steps / Preconditions:** (if applicable)
+
+   **Gherkin:**
+   ```gherkin
+   Feature: Feature Name
+     Scenario: ...
+       Given ...
+       When ...
+       Then ...
+   ```
+   ---
+   ```
+
+   Include a header with feature name, total count, and counts by priority.
+
+9. Ask the user to **confirm** before upload.
 
 ## Output
 
-Save to `outputs/xray/<feature>-test-cases.csv`.
+- CSV → `outputs/xray/<feature>-test-cases.csv`
+- Review markdown → `outputs/<feature>-test-cases.md`
 
 Full policy: **`CLAUDE.md`** (repo root).
