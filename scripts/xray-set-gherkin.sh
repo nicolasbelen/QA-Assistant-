@@ -18,12 +18,20 @@ TOKEN=$(curl -sf -H "Content-Type: application/json" -X POST \
   --data "{\"client_id\": \"$XRAY_CLIENT_ID\", \"client_secret\": \"$XRAY_CLIENT_SECRET\"}" \
   https://xray.cloud.getxray.app/api/v2/authenticate | tr -d '"')
 
-GHERKIN_JSON=$(printf '%s' "$GHERKIN" | python3 -c "import sys,json; print(json.dumps(sys.stdin.read()))")
+# Build payload via Python to safely handle multiline Gherkin and special characters
+PAYLOAD_FILE=$(mktemp)
+printf '%s' "$GHERKIN" | python3 -c "
+import sys, json
+issue_id = '$ISSUE_ID'
+gherkin = sys.stdin.read()
+query = 'mutation { updateGherkinTestDefinition(issueId: \"' + issue_id + '\", gherkin: ' + json.dumps(gherkin) + ') { issueId } }'
+print(json.dumps({'query': query}))
+" > "$PAYLOAD_FILE"
 
 curl -sf -X POST \
   -H "Authorization: Bearer $TOKEN" \
   -H "Content-Type: application/json" \
-  --data "{\"query\": \"mutation { updateGherkinTestDefinition(issueId: \\\"${ISSUE_ID}\\\", gherkin: ${GHERKIN_JSON}) { issueId } }\"}" \
+  --data @"$PAYLOAD_FILE" \
   https://xray.cloud.getxray.app/api/v2/graphql \
   | python3 -c "
 import sys, json
@@ -33,3 +41,5 @@ if 'errors' in d:
     sys.exit(1)
 print('OK — issueId:', d['data']['updateGherkinTestDefinition']['issueId'])
 "
+
+rm -f "$PAYLOAD_FILE"

@@ -34,7 +34,8 @@ The user may provide:
    - Show the user a preview table (count by priority, first 3 summaries) and ask: **"Upload these N tests to Jira/Xray?"** Any affirmative reply proceeds.
 
 3. **For each row — create Jira Test issue via MCP:**
-   - Use `jira_create_issue` with: `projectKey`, issue type `Test`, `summary`, `description`, `priority`, `labels`
+   - Use `jira_create_issue` with: `projectKey`, issue type `Xray Test`, `summary`, `description`, `priority`, `labels`
+   - **Important:** use `Xray Test` (not `Test` — that is a sub-task type in SQA and requires a parent)
    - Record the returned **issue key** (e.g. `SQA-21640`) and **numeric issue ID** (e.g. `538181`) — both are needed
    - If creation fails, log the error and continue with remaining rows
 
@@ -62,7 +63,7 @@ The user may provide:
 
 ## Notes
 
-- Jira issue type must be `Test` (Xray Test type in SQA) — do not use `Task` or `Story`
+- Jira issue type must be `Xray Test` — do not use `Test` (sub-task), `Task`, or `Story`
 - The numeric issue ID is returned by `jira_create_issue` in the `id` field of the response
 - Gherkin content must start with `Feature:` on the first line
 - `priority` values in SQA use P0–P4 directly (no name mapping needed)
